@@ -1,0 +1,168 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor} % for color definitions
+\usepackage{mdframed} % for framing and shading the problems
+\usepackage{lipsum} % for generating text, remove in your actual document
+\usepackage{geometry} % for page layout
+\usepackage{titling} % for title page layout
+
+% Set the page size and margins
+\geometry{letterpaper, portrait, margin=1in}
+
+% Define a new environment for the problems that takes one argument for the problem number
+\newenvironment{problem}[1]{
+    \begin{mdframed}[backgroundcolor=gray!20, skipabove=\baselineskip, skipbelow=\baselineskip, nobreak=true, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=10pt, innerbottommargin=10pt]
+    \textbf{Problem #1.}
+}{
+    \end{mdframed}
+}
+
+% Define a new environment for the proofs
+\newenvironment{proof}{
+    \begin{mdframed}[nobreak=true, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=10pt, innerbottommargin=10pt]
+    \textbf{Proof.}
+}{
+    \hfill $\square$
+    \end{mdframed}
+}
+
+% Remove section numbering
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+% Remove table of contents numbering
+\renewcommand{\thesection}{}
+
+% Title page info
+\title{Chapter 5 \\ \large Sequences, Mathematical Induction, and Recursion}
+\author{Ojas Chaturvedi}
+\date{}
+
+% ------------------------------------------------------------------------------
+\begin{document}
+
+% Title page
+\begin{titlingpage}
+    \maketitle
+    \tableofcontents
+\end{titlingpage}
+
+% ------------------------------------------------------------------------------
+\section{5.1: Sequences}
+    \subsection{Notes}
+        \begin{itemize}
+            \item Sequence: a function whose domain is either all the integers between two given integers, or all the integers greater than or equal to a given integer.
+            \begin{itemize}
+                \item Know subscript/index, initial and final term, infinite sequence, general/explicit formula
+            \end{itemize}
+            \item Summation Notation:
+                \begin{align*}
+                    \sum_{k=m}^{n} a_k = a_m + a_{m+1} + a_{m+2} + \cdots + a_n
+                \end{align*}
+                where k is the index, m is the lower limit, and n is the upper limit.
+            \item When the upper limit of a summation is a variable, an ellipsis is used to write the summation in expanded form. Expand the summation notation to first 3 or so, then put ellipsis and then variable form.
+            \item Product Notation:
+                \begin{align*}
+                    \prod_{k=m}^{n} a_k = a_m \cdot a_{m+1} \cdot a_{m+2} \cdots a_n
+                \end{align*}
+            \item Properties of Summations and Products (aka Theorem 5.1.1)
+                \begin{align}
+                    \sum_{k=m}^{n} a_k + \sum_{k=m}^{n} b_k &= \sum_{k=m}^{n} (a_k + b_k) \\
+                    c \cdot \sum_{k=m}^{n} a_k &= \sum_{k=m}^{n} (c \cdot a_k) \\
+                    (\prod_{k=m}^{n} a_k) \cdot (\prod_{k=m}^{n} b_k) &= \prod_{k=m}^{n} (a_k \cdot b_k)
+                \end{align}
+            \item When replacing a new variable into a summation or product, make sure to change the index variable to the new variable and the numbers by putting them into the equation of the new variable.
+            \item Factorial: the quantity $\mathbf{n!}$ is defined to be the product of all the integers from 1 to n:
+                \begin{align*}
+                    n! = n \cdot (n-1) \cdots 3 \cdot 2 \cdot 1
+                \end{align*}
+                and
+                \begin{align*}
+                    0! = 1
+                \end{align*}
+                Recursive definition:
+                \begin{align*}
+                    n! = \begin{cases}
+                        1 & \text{if } n = 0 \\
+                        n \cdot (n-1)! & \text{if } n > 0
+                    \end{cases}
+                \end{align*}
+            \item $n$ choose $r$: the number of subsets (therefore an integer) of size $r$ that can be chosen from a set of $n$ elements.
+                \begin{align*}
+                    n \choose r &= \frac{n!}{r!(n-r)!}
+                \end{align*}
+                for all integers $n$ and $r$ with $0 \leq r \leq n$.
+        \end{itemize}
+    \subsection{Things to Check}
+        \begin{itemize}
+            \item Recursive definition of summation pg 232
+        \end{itemize}
+
+\newpage \section{5.2: Mathematical Induction I}
+    \subsection{Notes}
+        \begin{itemize}
+            \item Principles of Mathematical Induction: Let $P(n)$ be a property that is defined for integers $n$, and let $a$ be a fixed integer. Suppose the following two statements are true:
+                \begin{enumerate}
+                    \item Basis Step: Show that $P(a)$ is true.
+                    \item Inductive Step: For all integers $k \geq a$, if $P(k)$ is true, then $P(k+1)$ is true.
+                        \begin{itemize}
+                            \item To perform this step:
+                                \begin{enumerate}
+                                    \item Suppose that $P(k)$ is true for an arbitrary integer $k \geq a$, which is called the inductive hypothesis.
+                                    \item Show that $P(k+1)$ is true.
+                                \end{enumerate}
+                            \item Remember that you need to prove each side of the equation separately. Otherwise, the proof is invalid.
+                        \end{itemize}
+                    \item Conclusion: Then $P(n)$ is true for all integers $n \geq a$.
+                \end{enumerate}
+            \item Steps of Proof by Mathematical Induction:
+                \begin{enumerate}
+                    \item State the theorem to be proved.
+                        \begin{itemize}
+                            \item Let the property $P(n)$ be the equation: {problem goes here}
+                        \end{itemize}
+                    \item Prove the basis step.
+                        \begin{itemize}
+                            \item Show that $P(a)$ is true.
+                        \end{itemize}
+                    \item State the inductive hypothesis.
+                        \begin{itemize}
+                            \item Show that for all integers $k \geq 1$, if $P(k)$ is true then $P(k+1)$ is also true:
+                        \end{itemize}
+                    \item Prove the inductive step.
+                    \item State the conclusion.
+                        \begin{itemize}
+                            \item Therefore the equation $P(k+1)$ is true [\textit{as was to be shown}]. [\textit{Since we have proved both the basis step and the inductive step, the conclusion follows by the principle of mathematical induction. Therefore the equation $P(n)$ is true for all integers $n \geq 1$.}]
+                        \end{itemize}
+                \end{enumerate}
+            \item Sum of the first $n$ integers is
+                \begin{align*}
+                    1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}
+                \end{align*}
+            \item Geometric sum of the first $n$ integers is
+                \begin{align*}
+                    \sum_{i=0}^{n} r^i = \frac{r^{n+1}-1}{r-1}
+                \end{align*}
+        \end{itemize}
+    \subsection{Things to check}
+        \begin{itemize}
+            \item Steps of proof and wording (check examples if need be) pg 247-248
+            \item Check other method for solution to 5.2.4.b pg 283
+            \item Cents problem pg 245
+        \end{itemize}
+
+\newpage \section{5.3: Mathematical Induction II}
+    \subsection{Notes}
+        \begin{itemize}
+            \item Enter here.
+        \end{itemize}
+
+    \subsection{Things to check}
+        \begin{itemize}
+            \item 
+        \end{itemize}
+
+\end{document}
