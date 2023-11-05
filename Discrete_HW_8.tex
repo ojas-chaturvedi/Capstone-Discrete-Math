@@ -1,0 +1,445 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor} % for color definitions
+\usepackage{mdframed} % for framing and shading the problems
+\usepackage{lipsum} % for generating text, remove in your actual document
+\usepackage{geometry} % for page layout
+\usepackage{titling} % for title page layout
+
+% Set the page size and margins
+\geometry{letterpaper, portrait, margin=1in}
+
+% Define a new environment for the problems that takes one argument for the problem number
+\newenvironment{problem}[1]{
+    \begin{mdframed}[backgroundcolor=gray!20, skipabove=\baselineskip, skipbelow=\baselineskip, nobreak=true, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=10pt, innerbottommargin=10pt]
+    \textbf{Problem #1.}
+}{
+    \end{mdframed}
+}
+
+% Define a new environment for the proofs
+\newenvironment{proof}{
+    \begin{mdframed}[nobreak=false, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=10pt, innerbottommargin=10pt]
+    \textbf{Proof.}
+}{
+    \hfill $\square$
+    \end{mdframed}
+}
+
+% Remove section numbering
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+% Remove table of contents numbering
+\renewcommand{\thesection}{}
+
+% Title page info
+\title{Capstone: Discrete Math \\ \large Homework 8}
+\author{Ojas Chaturvedi}
+\date{Due: November 2, 2023}
+
+% ------------------------------------------------------------------------------
+\begin{document}
+
+% Title page
+\begin{titlingpage}
+    \maketitle
+    \tableofcontents
+\end{titlingpage}
+
+% ------------------------------------------------------------------------------
+
+\section{Homework: 4.8}
+    \begin{problem}{15}
+        Use the Euclidean algorithm to hand-calculate the greatest common divisors of 832 and 10933.
+    \end{problem}
+    \begin{proof}
+        ENTER HERE
+    \end{proof}
+
+\newpage \section{Homework: 5.1}
+    \begin{problem}{44}
+        Write using summation or product notation:
+        \begin{align*}
+            \left(1^3-1\right)-\left(2^3-1\right)+\left(3^3-1\right)-\left(4^3-1\right)+\left(5^3-1\right)
+        \end{align*}
+    \end{problem}
+    \begin{proof}
+        \begin{align*}
+            \sum_{n=1}^{5} ((n^3-1) \cdot (-1)^{n-1})
+        \end{align*}
+    \end{proof}
+
+    \begin{problem}{45}
+        Write using summation or product notation:
+        \begin{align*}
+            \left(2^2-1\right) \cdot\left(3^2-1\right) \cdot\left(4^2-1\right)
+        \end{align*}
+    \end{problem}
+    \begin{proof}
+        \begin{align*}
+            \prod_{n=2}^{4} (n^2 -1)
+        \end{align*}
+    \end{proof}
+
+    \begin{problem}{46}
+        Write using summation or product notation:
+        \begin{align*}
+            \frac{2}{3 \cdot 4}-\frac{3}{4 \cdot 5}+\frac{4}{5 \cdot 6}-\frac{5}{6 \cdot 7}+\frac{6}{7 \cdot 8}
+        \end{align*}
+    \end{problem}
+    \begin{proof}
+        \begin{align*}
+            \sum_{n=2}^{6} \left ( \left (\frac{n}{(n+1) \cdot (n+2)} \right) \cdot (-1)^{n} \right)
+        \end{align*}
+    \end{proof}
+
+    \begin{problem}{77}
+        \begin{enumerate}
+            \item[a.] Prove that $n!+2$ is divisible by $2$, for all integers $n \geq 2$.
+            \item[b.] Prove that $n!+k$ is divisible by $k$, for all integers $n \geq 2$ and $k=2,3, \cdots, n$.
+        \end{enumerate}
+    \end{problem}
+    \begin{proof}
+        \begin{enumerate}
+            \item[a.]
+                Let $n$ be any integer greater than or equal to $2$. \\
+                By definition of factorial,
+                \begin{align*}
+                    n! = n \cdot (n-1) \cdots 2 \cdot 1 
+                \end{align*}
+                Since $2$ will always be a factor of $n!$, $n!$ can be written as $2k$ for some integer $k$.
+                Thus,
+                \begin{align*}
+                    n! + 2 &= 2k + 2 \\
+                    &= 2(k + 1)
+                \end{align*}
+                $k + 1$ is an integer, so $n! + 2$ can be written as $2m$ for some integer $m$. \\
+                Therefore, $n! + 2$ is divisible by $2$ by definition of divisibility.
+            \item[b.]
+                Let $n$ be any integer greater than or equal to $2$. \\
+                Let $k$ be any integer greater than or equal to $2$ and less than or equal to $n$. \\
+                By definition of factorial, $n! = n \cdot (n-1) \cdots 2 \cdot 1$, and since $2 \leq k \leq n$, $k$ will always be a factor of $n!$. \\
+                \begin{align*}
+                    n! + k &= n \cdot (n-1) \cdots 2 \cdot 1 + k \\
+                    &= n \cdot (n-1) \cdots (k+1) \cdot k \cdot (k-1) \cdots 2 \cdot 1 + k \\
+                    &= k \cdot (n \cdot (n-1) \cdots (k+1) \cdot (k-1) \cdots 2 \cdot 1 + 1)
+                \end{align*}
+                Therefore, $n! + k$ can be written as $k \cdot m$ for some integer $m = (n \cdot (n-1) \cdots (k+1) \cdot (k-1) \cdots 2 \cdot 1 + 1)$.
+                Thus, $n! + k$ is divisible by $k$ by definition of divisibility.
+        \end{enumerate}
+    \end{proof}
+
+    \begin{problem}{79}
+        Prove that if $p$ is a prime number and $r$ is an integer with $0<r<p$, then $p \choose r$ is divisible by $p$.
+    \end{problem}
+    \begin{proof}
+        Let $p$ be any prime number and $r$ be any integer such that $0 < r < p$.
+        By definition of $p \choose r$,
+        \begin{align*}
+            p \choose r &= \frac{p!}{r! \cdot (p-r)!}
+        \end{align*}
+        By definition of factorial,
+        \begin{align*}
+            p! &= p \cdot (p-1) \cdots 2 \cdot 1
+        \end{align*}
+        Therefore, $p!$ can be written as $p \cdot n$ for some integer $n = (p-1) \cdots 2 \cdot 1$
+        Putting $p!$ back into the equation for $p \choose r$,
+        \begin{align*}
+            p \choose r &= \frac{p \cdot n}{r! \cdot (p-r)!}
+        \end{align*}
+        Therefore, $p \choose r$ can be written as $p \cdot m$ for some integer $m = \frac{n}{r! \cdot (p-r)!}$. \\
+        Thus, $p \choose r$ is divisible by $p$ by definition of divisibility.
+    \end{proof}
+
+\newpage \section{Homework: 5.2}
+    \begin{problem}{7}
+        Prove the statement using mathematical induction. \\
+        For all integers $n \geq 1$,
+        \begin{align*}
+            1 + 6 + 11 + 16 + \cdots + (5n-4) = \frac{n(5n-3)}{2}
+        \end{align*}
+    \end{problem}
+    \begin{proof}
+        Let the property $P(n)$ be the equation:
+        \begin{align*}
+            1 + 6 + 11 + 16 + \cdots + (5n-4) = \frac{n(5n-3)}{2}
+        \end{align*}
+        First, we must prove that $P(1)$ is true (basis step).
+        \begin{align*}
+            1 &= \frac{1(5 \cdot 1-3)}{2}
+        \end{align*}
+        The left-hand side of the equation is $1$, and the right-hand side of the equation is
+        \begin{align*}
+            \frac{1(5 \cdot 1-3)}{2} &= \frac{1(5-3)}{2} \\
+            &= \frac{1(2)}{2} \\
+            &= 1
+        \end{align*}
+        Thus, $P(1)$ is true. \\
+        Now, suppose that $P(k)$ is true for some integer $k \geq 1$ (inductive hypothesis). That is,
+        \begin{align*}
+            1 + 6 + 11 + 16 + \cdots + (5k-4) = \frac{k(5k-3)}{2}
+        \end{align*}
+        We must show that $P(k+1)$ is true (inductive step). That is,
+        \begin{align*}
+            1 + 6 + 11 + 16 + \cdots + (5(k+1)-4) &= \frac{(k+1)(5(k+1)-3)}{2} \\
+            1 + 6 + 11 + 16 + \cdots + (5k-1) &= \frac{(k+1)(5k+2)}{2}
+        \end{align*}
+        The left-hand side of $P(k+1)$ is
+        \begin{align*}
+            1 + 6 + 11 + 16 + \cdots + (5k-1) & = 1 + 6 + 11 + 16 + \cdots + (5k-4) + (5k-1) \\
+            & \quad \text{by making the next-to-last term explicit} \\
+            &= \frac{k(5k-3)}{2} + (5k-1) \\
+            & \quad \text{by substitution of the inductive hypothesis} \\
+            &= \frac{5k^2-3k}{2} + (5k-1) \\
+            & \quad \text{by distribution} \\
+            &= \frac{5k^2-3k+10k-2}{2} \\
+            & \quad \text{by combining like terms} \\
+            &= \frac{5k^2+7k-2}{2} \\
+            & \quad \text{by combining like terms}
+        \end{align*}
+        The right-hand side of $P(k+1)$ is
+        \begin{align*}
+            \frac{(k+1)(5k+2)}{2} &= \frac{5k^2+7k+2}{2} \\
+            & \quad \text{by distribution} \\
+            &= \frac{5k^2+7k-2}{2} \\
+            & \quad \text{by combining like terms}
+        \end{align*}
+        Thus, the left-hand side of $P(k+1)$ is equal to the right-hand side of $P(k+1)$, and $P(k+1)$ is true. \\
+        Since we have proved both the basis step and the inductive step, we conclude that the statement is true using mathematical induction.
+    \end{proof}
+
+    \begin{problem}{9}
+        Prove the statement using mathematical induction. \\
+        For all integers $n \geq 3$,
+        \begin{align*}
+            4^3 + 4^4 + 4^5 + \cdots + 4^n = \frac{4(4^n-16)}{3}
+        \end{align*}
+    \end{problem}
+    \begin{proof}
+        Let $P(n)$ be the equation:
+        \begin{align*}
+            4^3 + 4^4 + 4^5 + \cdots + 4^n = \frac{4(4^n-16)}{3}
+        \end{align*}
+        First, we must prove that $P(3)$ is true (basis step).
+        \begin{align*}
+            4^3 &= \frac{4(4^3-16)}{3}
+        \end{align*}
+        The left-hand side of the equation is $64$, and the right-hand side of the equation is
+        \begin{align*}
+            \frac{4(4^3-16)}{3} &= \frac{4(64-16)}{3} \\
+            &= \frac{4(48)}{3} \\
+            &= \frac{192}{3} \\
+            &= 64
+        \end{align*}
+        Thus, $P(3)$ is true. \\
+        Now, suppose that $P(k)$ is true for some integer $k \geq 3$ (inductive hypothesis). That is,
+        \begin{align*}
+            4^3 + 4^4 + 4^5 + \cdots + 4^k = \frac{4(4^k-16)}{3}
+        \end{align*}
+        We must show that $P(k+1)$ is true (inductive step). That is,
+        \begin{align*}
+            4^3 + 4^4 + 4^5 + \cdots + 4^{k+1} = \frac{4(4^{k+1}-16)}{3}
+        \end{align*}
+        The left-hand side of $P(k+1)$ is
+        \begin{align*}
+            4^3 + 4^4 + 4^5 + \cdots + 4^{k+1} &= 4^3 + 4^4 + 4^5 + \cdots + 4^k + 4^{k+1} \\
+            & \quad \text{by making the next-to-last term explicit} \\
+            &= \frac{4(4^k-16)}{3} + 4^{k+1} \\
+            & \quad \text{by substitution of the inductive hypothesis} \\
+            &= \frac{4(4^k-16) + 3(4^{k+1})}{3} \\
+            & \quad \text{by combining like terms} \\
+            &= \frac{4 \cdot 4^k - 64 + 3(4 \cdot 4^k)}{3} \\
+            & \quad \text{by distribution} \\
+            &= \frac{4 \cdot 4^k - 64 + 12 \cdot 4^k}{3} \\
+            & \quad \text{by distribution} \\
+            &= \frac{16 \cdot 4^k - 64}{3} \\
+            & \quad \text{by combining like terms} \\
+            &= \frac{4 \cdot (4 \cdot 4^k) - 64}{3} \\
+            & \quad \text{by factoring} \\
+            &= \frac{4 ((4 \cdot 4^k) - 16)}{3} \\
+            & \quad \text{by factoring} \\
+            &= \frac{4 (4^{k+1} - 16)}{3} \\
+            & \quad \text{by exponent product rule}
+        \end{align*}
+        Thus, the left-hand side of $P(k+1)$ is equal to the right-hand side of $P(k+1)$, and $P(k+1)$ is true. \\
+        Since we have proved both the basis step and the inductive step, we conclude that the statement is true using mathematical induction.
+    \end{proof}
+
+    \begin{problem}{12}
+        Prove the statement using mathematical induction.
+        \begin{align*}
+            \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{n(n+1)} = \frac{n}{n+1}
+        \end{align*}
+        for all integers $n \geq 1$.
+    \end{problem}
+    \begin{proof}
+        Let the property $P(n)$ be the equation:
+        \begin{align*}
+            \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{n(n+1)} = \frac{n}{n+1}
+        \end{align*}
+        First, we must prove that $P(1)$ is true (basis step). \\
+        \begin{align*}
+            \frac{1}{1 \cdot 2} &= \frac{1}{1+1} \\
+            \frac{1}{2} &= \frac{1}{2}
+        \end{align*}
+        Thus, $P(1)$ is true. \\
+        Now, suppose that $P(k)$ is true for some integer $k \geq 1$ (inductive hypothesis). That is,
+        \begin{align*}
+            \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{k(k+1)} = \frac{k}{k+1}
+        \end{align*}
+        We must show that $P(k+1)$ is true (inductive step). That is,
+        \begin{align*}
+            \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{(k+1)((k+1)+1)} &= \frac{k+1}{(k+1)+1} \\
+            \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{(k+1)(k+2)} &= \frac{k+1}{k+2} \\
+            \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{k^2 + 3k + 2} &= \frac{k+1}{k+2}
+        \end{align*}
+        The left-hand side of $P(k+1)$ is
+        \begin{align*}
+            \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{k^2 + 3k + 2} &= \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{k(k+1)} + \frac{1}{k^2 + 3k + 2} \\
+            & \quad \text{by making the next-to-last term explicit} \\
+            &= \frac{k}{k+1} + \frac{1}{k^2 + 3k + 2} \\
+            & \quad \text{by substitution of the inductive hypothesis} \\
+            &= \frac{k(k+2)+1}{k^2+3k+2} \\
+            & \quad \text{by combining like terms} \\
+            &= \frac{k^2 +2k + 1}{k^2 + 3k + 2} \\
+            & \quad \text{by distribution} \\
+            &= \frac{(k+1)(k+1)}{(k+1)(k+2)} \\
+            & \quad \text{by factoring}\\
+            &= \frac{k+1}{k+2} \\
+            & \quad \text{by cancelling out like terms}
+        \end{align*}
+        Thus, the left-hand side of $P(k+1)$ is equal to the right-hand side of $P(k+1)$, and $P(k+1)$ is true. \\
+        Since we have proved both the basis step and the inductive step, we conclude that the statement is true using mathematical induction.
+    \end{proof}
+
+    \begin{problem}{17}
+        Prove the statement using mathematical induction.
+        \begin{align*}
+            \prod_{i=0}^{n} \left(\frac{1}{2i+1} \cdot \frac{1}{2i+2} \right) = \frac{1}{(2n+2)!}
+        \end{align*}
+        for all integers $n \geq 0$.
+    \end{problem}
+    \begin{proof}
+        Let the property $P(n)$ be the equation:
+        \begin{align*}
+            \prod_{i=0}^{n} \left(\frac{1}{2i+1} \cdot \frac{1}{2i+2} \right) = \frac{1}{(2n+2)!}
+        \end{align*}
+        First, we must prove that $P(0)$ is true (basis step). \\
+        \begin{align*}
+            \prod_{i=0}^{0} \left(\frac{1}{2i+1} \cdot \frac{1}{2i+2} \right) &= \frac{1}{(2 \cdot 0+2)!} \\
+            \left(\frac{1}{2 \cdot 0+1} \cdot \frac{1}{2 \cdot 0+2} \right) &= \frac{1}{2!} \\
+            \left(\frac{1}{1} \cdot \frac{1}{2} \right) &= \frac{1}{2} \\
+            \frac{1}{2} &= \frac{1}{2}
+        \end{align*}
+        Thus, $P(0)$ is true. \\
+        Now, suppose that $P(k)$ is true for some integer $k \geq 0$ (inductive hypothesis). That is,
+        \begin{align*}
+            \prod_{i=0}^{k} \left(\frac{1}{2i+1} \cdot \frac{1}{2i+2} \right) = \frac{1}{(2k+2)!}
+        \end{align*}
+        We must show that $P(k+1)$ is true (inductive step). That is,
+        \begin{align*}
+            \prod_{i=0}^{k+1} \left(\frac{1}{2i+1} \cdot \frac{1}{2i+2} \right) &= \frac{1}{(2(k+1)+2)!} \\
+            \prod_{i=0}^{k+1} \left(\frac{1}{2i+1} \cdot \frac{1}{2i+2} \right) &= \frac{1}{(2k+4)!}
+        \end{align*}
+        The left-hand side of $P(k+1)$ is
+        \begin{align*}
+            \prod_{i=0}^{k+1} \left(\frac{1}{2i+1} \cdot \frac{1}{2i+2} \right) &= \prod_{i=0}^{k} \left(\frac{1}{2i+1} \cdot \frac{1}{2i+2} \right) \cdot \left(\frac{1}{2(k+1)+1} \cdot \frac{1}{2(k+1)+2} \right) \\
+            & \quad \text{by writing the $(k+1)$st term separately from the first $k$ terms} \\
+            &= \frac{1}{(2k+2)!} \cdot \left(\frac{1}{2(k+1)+1} \cdot \frac{1}{2(k+1)+2} \right) \\
+            & \quad \text{by substitution of the inductive hypothesis} \\
+            &= \frac{1}{(2k+2)!} \cdot \left(\frac{1}{2k+3} \cdot \frac{1}{2k+4} \right) \\
+            & \quad \text{by distribution} \\
+            &= \frac{1}{(2k+4) \cdot (2k+3) \cdot (2k+2)!} \\
+            &= \frac{1}{(2k+4)!} \\
+            & \quad \text{by definition of factorial}
+        \end{align*}
+        Thus, the left-hand side of $P(k+1)$ is equal to the right-hand side of $P(k+1)$, and $P(k+1)$ is true. \\
+        Since we have proved both the basis step and the inductive step, we conclude that the statement is true using mathematical induction.
+    \end{proof}
+
+    \begin{problem}{19}
+        Use mathematical induction, the product rule from calculus, and the facts that $\frac{d(x)}{dx} = 1$ and that $x^{k+1} = x \cdot x^k$ to prove that for all integers $n \geq 1$, $\frac{d(x^n)}{dx} = nx^{n-1}$.
+    \end{problem}
+    \begin{proof}
+        Let the property $P(n)$ be the equation:
+        \begin{align*}
+            \frac{d(x^n)}{dx} = nx^{n-1}
+        \end{align*}
+        First, we must prove that $P(1)$ is true (basis step). \\
+        \begin{align*}
+            \frac{d(x^1)}{dx} &= 1 \cdot x^{1-1} \\
+            \frac{d(x)}{dx} &= 1 \cdot x^{0} \\
+            1 &= 1
+        \end{align*}
+        Thus, $P(1)$ is true. \\
+        Now, suppose that $P(k)$ is true for some integer $k \geq 1$ (inductive hypothesis). That is,
+        \begin{align*}
+            \frac{d(x^k)}{dx} = kx^{k-1}
+        \end{align*}
+        We must show that $P(k+1)$ is true (inductive step). That is,
+        \begin{align*}
+            \frac{d(x^{k+1})}{dx} &= (k+1) \cdot x^{(k+1)-1} \\
+            \frac{d(x^{k+1})}{dx} &= (k+1) \cdot x^{k}
+        \end{align*}
+        The left-hand side of $P(k+1)$ is
+        \begin{align*}
+            \frac{d(x^{k+1})}{dx} &=\frac{d}{dx}(x^k \cdot x) \\
+            & \quad \text{by power product rule} \\
+            &= x \cdot \frac{d}{dx}x^k + x^k \cdot \frac{d}{dx}x \\
+            & \quad \text{by derivative product rule} \\
+            &= x \cdot k(x^{k-1}) + x^k \cdot 1\\
+            & \quad \text{by derivatives} \\
+            &= k(x^k) + x^k \\
+            & \quad \text{by combining like terms} \\
+            &= (k+1) \cdot x^k \\
+            & \quad \text{by factoring}
+        \end{align*}
+        Thus, the left-hand side of $P(k+1)$ is equal to the right-hand side of $P(k+1)$, and $P(k+1)$ is true. \\
+        Since we have proved both the basis step and the inductive step, we conclude that the statement is true using mathematical induction.
+    \end{proof}
+
+\section{Homework: 5.3}
+% 9, 10, 17, 20, 36
+    \begin{problem}{9}
+        Prove the statement using mathematical induction: $7^n - 1$ is divisible by $6$, for each integer $n \geq 0$.
+    \end{problem}
+    \begin{proof}
+        Enter proof here.
+    \end{proof}
+
+    \begin{problem}{10}
+        Prove the statement using mathematical induction: $n^3 -7n +3$ is divisible by $3$, for each integer $n \geq 0$.
+    \end{problem}
+    \begin{proof}
+        Enter proof here.
+    \end{proof}
+
+    \begin{problem}{17}
+        Prove the statement using mathematical induction: $1 + 3n \leq 4^n$, for every integer $n \geq 0$.
+    \end{problem}
+    \begin{proof}
+        Enter proof here.
+    \end{proof}
+
+    \begin{problem}{20}
+        Prove the statement using mathematical induction: $2^n < (n+2)!$, for every integer $n \geq 0$.
+    \end{problem}
+    \begin{proof}
+        Enter proof here.
+    \end{proof}
+
+    \begin{problem}{36}
+        In a round-robin tournament each team plays every other team exactly once. If the teams are labeled $T_1, T_2, \ldots, T_n,$ then the the outcome of such a tournament can be represented by a drawing, called a directed graph, in which the teams are represented as dots and an arrow is drawn from one dot to another if, and only if, the team represented by the ﬁrst dot beats the team represented by the second dot. For example, the directed graph below shows one outcome of a round-robin tournament involving ﬁve teams, A, B, C, D,and E. \\ \\
+        Use mathematical induction to show that in any round-robin tournament involving $n$ teams, where $n \geq 2$, it is possible to label the teams $T_1, T_2, \ldots, T_n$ so that $T_i$ beats $T_{i+1}$ for all $i = 1, 2, \ldots, n-1$. For instance, one such labeling in the example above is $T_1 = A, T_2 = B, T_3 = C, T_4 = E, T_5 = D$. (Hint: Given $k+1$ teams, pick one -- say $T'$ beats $T_1$, $T'$ loses to the first $m$ teams (where $1 \leq m \leq k-1$) and beats the $(m+1)$st team, and $T'$ loses to all the other teams.)
+    \end{problem}
+    \begin{proof}
+        Enter proof here.
+    \end{proof}
+
+% ------------------------------------------------------------------------------
+\end{document}
+% ------------------------------------------------------------------------------
