@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor} % for color definitions
+\usepackage{mdframed} % for framing and shading the problems
+\usepackage{lipsum} % for generating text, remove in your actual document
+\usepackage{geometry} % for page layout
+\usepackage{titling} % for title page layout
+
+% Set the page size and margins
+\geometry{letterpaper, portrait, margin=1in}
+
+% Define a new environment for the problems that takes one argument for the problem number
+\newenvironment{problem}[1]{
+    \begin{mdframed}[backgroundcolor=gray!20, skipabove=\baselineskip, skipbelow=\baselineskip, nobreak=true, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=10pt, innerbottommargin=10pt]
+    \textbf{Problem #1.}
+}{
+    \end{mdframed}
+}
+
+% Define a new environment for the proofs
+\newenvironment{proof}{
+    \begin{mdframed}[nobreak=true, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=10pt, innerbottommargin=10pt]
+    \textbf{Proof.}
+}{
+    \hfill $\square$
+    \end{mdframed}
+}
+
+% Remove section numbering
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+% Remove table of contents numbering
+\renewcommand{\thesection}{}
+
+% Title page info
+\title{Title \\ \large Subtitle}
+\author{Ojas Chaturvedi}
+\date{Date}
+
+% ------------------------------------------------------------------------------
+\begin{document}
+
+% Title page
+\begin{titlingpage}
+    \maketitle
+    \tableofcontents
+\end{titlingpage}
+
+% ------------------------------------------------------------------------------
+
+\section{Homework: 4.8}
+    \begin{problem}{Question Number}
+        Enter problem here.
+    \end{problem}
+    \begin{proof}
+        Enter proof here.
+    \end{proof}
+
+% ------------------------------------------------------------------------------
+\end{document}
+% ------------------------------------------------------------------------------
