@@ -35,6 +35,7 @@
 
 % Remove table of contents numbering
 \renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{} % remove subsection numbering
 
 % Title page info
 \title{Chapter 5 \\ \large Sequences, Mathematical Induction, and Recursion}
@@ -165,4 +166,33 @@
             \item 
         \end{itemize}
 
+\newpage \section{Template for Mathematical Induction}
+    Let the property $P(n)$ be the equation:
+    \begin{align*}
+        \text{\{problem goes here\}}
+    \end{align*}
+    First, we must prove that $P(\text{\{smallest possible number goes here\}})$ is true (basis step).
+    \begin{align*}
+        \text{Show left-hand side = right-hand side of the equation}
+    \end{align*}
+    Thus, $P(\text{\{smallest possible number goes here\}})$ is true. \\
+    Now, suppose that $P(k)$ is true for some integer $k \geq \text{\{smallest possible number goes here\}}$ (inductive hypothesis). That is, 
+    \begin{align*}
+        \text{\{problem with k substituted goes here\}}
+    \end{align*}
+    We must show that $P(k+1)$ is true (inductive step). That is, 
+    \begin{align*}
+        \text{\{problem with (k+1) substituted goes here\}}
+    \end{align*}
+    The left-hand side of $P(k+1)$ is:
+    \begin{align*}
+        \text{\{work with reasoning goes here\}}
+    \end{align*}
+    The right-hand side of $P(k+1)$ is:
+    \begin{align*}
+        \text{\{work with reasoning goes here\}}
+    \end{align*}
+    Thus, the left-hand side of $P(k+1)$ is equal to the right-hand side of $P(k+1)$, and $P(k+1)$ is true. \\
+    Since we have proved both the basis step and the inductive step, we conclude that the statement is true using mathematical induction.
 \end{document}
+% ------------------------------------------------------------------------------
