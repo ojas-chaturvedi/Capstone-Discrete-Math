@@ -1,0 +1,5 @@
+                def simplifyfraction(num, dem):
+                    gcd = euc(num, dem)
+                    simplifiednum = num/gcd
+                    simplifieddem = dem/gcd
+                    return (simplifiednum, simplifieddem)

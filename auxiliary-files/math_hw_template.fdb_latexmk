@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1699180357 "/Users/oj/Developer/Capstone-Discrete-Math/math_hw_template.tex" "auxiliary-files/math_hw_template.pdf" "math_hw_template" 1699180358 0
-  "/Users/oj/Developer/Capstone-Discrete-Math/math_hw_template.tex" 1699160494 1923 2c4303e2dba9056275d924346b53b723 ""
+["pdflatex"] 1699231142 "/Users/oj/Developer/Capstone-Discrete-Math/math_hw_template.tex" "auxiliary-files/math_hw_template.pdf" "math_hw_template" 1699231143 0
+  "/Users/oj/Developer/Capstone-Discrete-Math/math_hw_template.tex" 1699231142 1923 2c4303e2dba9056275d924346b53b723 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -78,9 +78,9 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1694762629 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694762617 7883456 8e4f7477bbe93bf7877646eb4ea21712 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "auxiliary-files/math_hw_template.aux" 1699180357 167 64f31f9c04d797de5f14f92220c5b163 "pdflatex"
-  "auxiliary-files/math_hw_template.toc" 1699180357 59 9460fa3db94d9f4b98713e5c49e42613 "pdflatex"
-  "math_hw_template.tex" 1699160494 1923 2c4303e2dba9056275d924346b53b723 ""
+  "auxiliary-files/math_hw_template.aux" 1699231143 167 64f31f9c04d797de5f14f92220c5b163 "pdflatex"
+  "auxiliary-files/math_hw_template.toc" 1699231143 59 9460fa3db94d9f4b98713e5c49e42613 "pdflatex"
+  "math_hw_template.tex" 1699231142 1923 2c4303e2dba9056275d924346b53b723 ""
   (generated)
   "auxiliary-files/math_hw_template.aux"
   "auxiliary-files/math_hw_template.log"
