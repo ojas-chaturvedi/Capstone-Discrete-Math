@@ -7,6 +7,7 @@
 \usepackage{lipsum} % for generating text, remove in your actual document
 \usepackage{geometry} % for page layout
 \usepackage{titling} % for title page layout
+\DeclareMathOperator{\lcm}{lcm} % for lcm operator
 
 % Set the page size and margins
 \geometry{letterpaper, portrait, margin=1in}
@@ -53,26 +54,51 @@
 % ------------------------------------------------------------------------------
 
 \section{Homework: 4.8}
-% #15, 16, 19, 20, 27
     \begin{problem}{15}
         Use the Euclidean algorithm to hand-calculate the greatest common divisors of 832 and 10933.
     \end{problem}
     \begin{proof}
-        ENTER HERE
+        By the Euclidean algorithm,
+        \begin{align*}
+            10933 \mod 832 &= 117 \\
+            832 \mod 117 &= 13 \\
+            117 \mod 13 &= 0
+        \end{align*}
+        By Lemma 4.8.2, $\gcd(10933,832) = \gcd(832,117) = \gcd(117,13) = \gcd(13,0)$. \\
+        By Lemma 4.8.1, $\gcd(13,0) = 13$. \\
+        Thus, $\gcd(10933,832) = 13$.
     \end{proof}
 
     \begin{problem}{16}
         Use the Euclidean algorithm to hand-calculate the greatest common divisors of 4131 and 2431.
     \end{problem}
     \begin{proof}
-        Enter proof here.
+        By the Euclidean algorithm,
+        \begin{align*}
+            4131 \mod 2431 &= 1700 \\
+            2431 \mod 1700 &= 731 \\
+            1700 \mod 731 &= 238 \\
+            731 \mod 238 &= 17 \\
+            238 \mod 17 &= 0
+        \end{align*}
+        By Lemma 4.8.2, $\gcd(4131,2431) = \gcd(2431,1700) = \gcd(1700,731) = \gcd(731,238) = \gcd(238,17) = \gcd(17,0)$. \\
+        By Lemma 4.8.1, $\gcd(17,0) = 17$. \\
+        Thus, $\gcd(4131,2431) = 17$.
     \end{proof}
 
     \begin{problem}{19}
         Prove that for all positive integers $a$ and $b$, $a | b$ if, and only if, $\gcd(a,b) = a$. (Note that to prove ``$A$ if, and only if, $B$,'' you need to prove ``if $A$ then $B$'' and ``if $B$ then $A$.'')
     \end{problem}
     \begin{proof}
-        Enter proof here.
+        First, we need to prove that if $a | b$, then $\gcd(a, b) = a$. \\
+        Since $a|b$, $b = ac$, with some integer $c$. \\
+        We  know that $b\geq a$. \\
+        Using QRT, we can rewrite $b$ as $aq + r$, with some integers $q, r$ and $0\leq r < a$. \\
+        By Lemma 4.8.2, $\gcd(b, a) = \gcd(a, r)$. However, since $a | b$, $r = 0$. \\
+        Thus, $\gcd(a, b) = \gcd(a, 0) = a$, proving the conditional statement. \\
+        Next, we need to prove that if $\gcd(a, b) = a$, then $a | b$. \\
+        By definition of gcd, if $\gcd(a, b) = a$, then $a | a$ and $a | b$, proving the conditional statement. \\
+        As both conditionals have been proven, it is true that for all positive integers $a, b$, $a | b$ if, and only if, $\gcd(a, b) = a$.
     \end{proof}
 
     \begin{problem}{20}
@@ -83,9 +109,31 @@
     \end{problem}
     \begin{proof}
         \begin{enumerate}
-            \item[a.] Enter here.
-            \item[b.] Enter here.
+            \item[a.]
+                \textbf{Proof by contradicton:} \\
+                If $a, b$ are non-zero integers, and $d = \gcd(a, b)$, then $a/d$ and $b/d$ are integers with a common divisor greater than one. \\
+                This leads to a contradiction since $a/d$ and $b/d$ have a common divisor greater than one, meaning $d\neq \gcd(a, b)$ by definition of GCD. \\
+                Therefore, it is true that if $a, b$ are integers, not both zero, and $d = \gcd(a, b)$, then $a/d$ and $b/d$ are integers with no common divisor greater than one.
+            \item[b.]
+                Let the Euclidean algorithm be equivalent to euc(a, b) in the following code: \\
+                def frac\_simplify(num, dem): \\
+                    gcd = euclidean\_algorithm(num, dem) \\
+                    new\_num = num/gcd \\
+                    new\_dem = dem/gcd \\
+                    return (new\_num, new\_dem)
         \end{enumerate}
+    \end{proof}
+
+    \begin{problem}{27}
+        Prove that for all positive integers $a$ and $b$, $a | b$ if, and only if, $\lcm(a,b) = b$. \\ \\
+        Definition: The least common multiple of two nonzero integers $a$ and $b$, denoted $\lcm(a,b)$, is the positive integer $c$ such that
+        \begin{enumerate}
+            \item[a.] $a|c$ and $b|c$
+            \item[b.] for all positive integers $m$, if $a|m$ and $b|m$, then $c \leq m$.
+        \end{enumerate}
+    \end{problem}
+    \begin{proof}
+        First, we need to prove that if $a | b$, then $\lcm(a, b) = b$. As $a | b$, $b = ac$, with some integer $c$. We also know that $b\geq a$. As the LCM of $a, b$ must be divisible by both of these integers, the LCM has to be $\geq b$. Let's test if $b$ works as the LCM. Since $b | b$, $a | b$, and there isn't an integer $m$ less than $b$ s.t. $b | m$ and $a | m$, it is proven that $\lcm(a, b) = b$, proving the conditional statement. Next, we need to prove that if $\lcm(a, b) = b$, then $a | b$. By definition of lcm, if $\lcm(a, b) = b$, then $a | b$ and $b | b$, proving the conditional statement. Therefore, it is true that for all positive integers $a, b$, $a | b$ if, and only if, $\lcm(a, b) = b$.
     \end{proof}
 
 \newpage \section{Homework: 5.1}
@@ -128,7 +176,7 @@
     \begin{problem}{77}
         \begin{enumerate}
             \item[a.] Prove that $n!+2$ is divisible by $2$, for all integers $n \geq 2$.
-            \item[b.] Prove that $n!+k$ is divisible by $k$, for all integers $n \geq 2$ and $k=2,3, \cdots, n$.
+            \item[b.] Prove that $n!+k$ is divisible by $k$, for all integers $n \geq 2$ and $k=2,3, \ldots, n$.
         \end{enumerate}
     \end{problem}
     \begin{proof}
@@ -435,28 +483,168 @@
         Prove the statement using mathematical induction: $7^n - 1$ is divisible by $6$, for each integer $n \geq 0$.
     \end{problem}
     \begin{proof}
-        Enter proof here.
+        Let the property $P(n)$ be the sentence:
+        \begin{align*}
+            7^n - 1 \text{ is divisible by } 6
+        \end{align*}
+        First, let's prove that $P(0)$ is true (basis step).
+        \begin{align*}
+            7^0 - 1 &= 1 -1 \\
+            &= 0 \\
+            &= 6 \cdot 0
+        \end{align*}
+        Thus, $P(0)$ is true. \\
+        Now, suppose that $P(k)$ is true for some integer $k \geq 0$ (inductive hypothesis). That is,
+        \begin{align*}
+            7^k - 1 \text{ is divisible by } 6
+        \end{align*}
+        By the definition of divisibility, for some integer $r$,
+        \begin{align*}
+            7^k - 1 &= 6r
+        \end{align*}
+        We must show that $P(k+1)$ is true (inductive step). That is,
+        \begin{align*}
+            7^{k+1} - 1 \text{ is divisible by } 6
+        \end{align*}
+        The left-hand side of $P(k+1)$ is:
+        \begin{align*}
+            7^{k+1} - 1 &= 7 \cdot 7^k - 1 \\
+            & \quad \text{by the product exponent rule} \\
+            &= 7 \cdot (6r + 1) - 1 \\
+            & \quad \text{by definition of $7^k$} \\
+            &= 42r + 7 - 1 \\
+            & \quad \text{by distribution} \\
+            &= 42r + 6 \\
+            &= 6(7r + 1)
+        \end{align*}
+        $7r + 1$ is an integer since it is the sum of products of integers, so $7^{k+1} - 1$ can be written as $6m$ for some integer $m = (7r + 1)$. \\
+        By the definition of divisibility, $7^{k+1} - 1$ is divisible by $6$, and thus, $P(k+1)$ is true. \\
+        Since we have proved both the basis step and the inductive step, we conclude that the statement is true using mathematical induction.
     \end{proof}
 
     \begin{problem}{10}
         Prove the statement using mathematical induction: $n^3 -7n +3$ is divisible by $3$, for each integer $n \geq 0$.
     \end{problem}
     \begin{proof}
-        Enter proof here.
+        Let the property $P(n)$ be the sentence:
+        \begin{align*}
+            n^3 -7n +3 \text{ is divisible by } 3
+        \end{align*}
+        First, we must prove that $P(0)$ is true (basis step).
+        \begin{align*}
+            0^3 -7 \cdot 0 +3 \text{ is divisible by } 3
+        \end{align*}
+        \begin{align*}
+            0^3 -7(0) +3 &= 0 - 0 + 3 \\
+            &= 3 \\
+            &= 3 \cdot 1
+        \end{align*}
+        Thus, $P(0)$ is true. \\
+        Now, suppose that $P(k)$ is true for some integer $k \geq 0$ (inductive hypothesis). That is,
+        \begin{align*}
+            k^3 -7k +3 \text{ is divisible by } 3
+        \end{align*}
+        By the definition of divisibility, for some integer $r$,
+        \begin{align*}
+            k^3 -7k +3 &= 3r
+        \end{align*}
+        We must show that $P(k+1)$ is true (inductive step). That is,
+        \begin{align*}
+            (k+1)^3 -7(k+1) +3 \text{ is divisible by } 3
+        \end{align*}
+        The left-hand side of $P(k+1)$ is:
+        \begin{align*}
+            (k+1)^3 -7(k+1) +3 &= (k+1)(k+1)(k+1) -7(k+1) +3 \\
+            & \quad \text{by expanding} \\
+            &= (k+1)(k^2 + 2k + 1) -7(k+1) +3 \\
+            & \quad \text{by the product exponent rule} \\
+            &= k^3 + 2k^2 + k + k^2 + 2k + 1 -7k -7 +3 \\
+            & \quad \text{by expanding} \\
+            &= k^3 + 3k^2 -4k -3 \\
+            & \quad \text{by combining like terms} \\
+            &= 3r + 7k - 3 + 3k^2 - 4k -3 \\
+            & \quad \text{by substitution of the inductive hypothesis} \\
+            &= 3r + 3k^2 + 3k - 6 \\
+            & \quad \text{by combining like terms} \\
+            &= 3(r + k^2 + k - 2) \\
+            & \quad \text{by factoring}
+        \end{align*}
+        $r + k^2 + k - 2$ is an integer since it is a sum of the product of integers, so $(k+1)^3 -7(k+1) +3$ can be written as $3m$ for some integer $m = (r + k^2 + k - 2)$. \\
+        By the definition of divisibility, $(k+1)^3 -7(k+1) +3$ is divisible by $3$, and thus, $P(k+1)$ is true. \\
+        Since we have proved both the basis step and the inductive step, we conclude that the statement is true using mathematical induction.
     \end{proof}
 
     \begin{problem}{17}
         Prove the statement using mathematical induction: $1 + 3n \leq 4^n$, for every integer $n \geq 0$.
     \end{problem}
     \begin{proof}
-        Enter proof here.
+        Let the property $P(n)$ be the inequality:
+        \begin{align*}
+            1 + 3n \leq 4^n
+        \end{align*}
+        First, we must prove that $P(0)$ is true (basis step).
+        \begin{align*}
+            1 + 3(0) &\leq 4^0 \\
+            1 &\leq 1
+        \end{align*}
+        Thus, $P(0)$ is true. \\
+        Now, suppose that $P(k)$ is true for some integer $k \geq 0$ (inductive hypothesis). That is,
+        \begin{align*}
+            1 + 3k \leq 4^k
+        \end{align*}
+        We must show that $P(k+1)$ is true (inductive step). That is,
+        \begin{align*}
+            1 + 3(k+1) &\leq 4^{k+1} \\
+            1 + 3k+3 &\leq 4^{k+1} \\
+            3k+4 &\leq 4^{k+1} \\
+        \end{align*}
+        The left-hand side of $P(k+1)$ is:
+        \begin{align*}
+            3k+4 &= 3k+1+3 \\
+            &\leq 4^k + 3 \\
+            & \quad \text{by substitution of the inductive hypothesis} \\
+            &\leq 4^k + 4^1 \\
+            & \quad \text{since $3 < 4^1$} \\
+            &\leq 4^{k+1}
+        \end{align*}
+        Thus, the left-hand side of $P(k+1)$ is less than or equal to the right-hand side of $P(k+1)$, and $P(k+1)$ is true. \\
+        Since we have proved both the basis step and the inductive step, we conclude that the statement is true using mathematical induction.
     \end{proof}
 
     \begin{problem}{20}
         Prove the statement using mathematical induction: $2^n < (n+2)!$, for every integer $n \geq 0$.
     \end{problem}
     \begin{proof}
-        Enter proof here.
+        Let the property $P(n)$ be the inequality:
+        \begin{align*}
+            2^n < (n+2)!
+        \end{align*}
+        First, we must prove that $P(0)$ is true (basis step).
+        \begin{align*}
+            2^0 &< (0+2)! \\
+            1 &< 2
+        \end{align*}
+        Thus, $P(0)$ is true. \\
+        Now, suppose that $P(k)$ is true for some integer $k \geq 0$ (inductive hypothesis). That is,
+        \begin{align*}
+            2^k < (k+2)!
+        \end{align*}
+        We must show that $P(k+1)$ is true (inductive step). That is,
+        \begin{align*}
+            2^{k+1} &< ((k+1)+2)! \\
+            2^{k+1} &< (k+3)!
+        \end{align*}
+        The left-hand side of $P(k+1)$ is:
+        \begin{align*}
+            2^{k+1} &= 2 \cdot 2^k \\
+            &< 2 \cdot (k+2)! \\
+            & \quad \text{by substitution of the inductive hypothesis} \\
+            &< (k+3)(k+2)! \\
+            & \quad \text{since $2 < k+3$} \\
+            &< (k+3)!
+        \end{align*}
+        Thus, the left-hand side of $P(k+1)$ is less than the right-hand side of $P(k+1)$, and $P(k+1)$ is true. \\
+        Since we have proved both the basis step and the inductive step, we conclude that the statement is true using mathematical induction.
     \end{proof}
 
     \begin{problem}{36}
@@ -464,7 +652,7 @@
         Use mathematical induction to show that in any round-robin tournament involving $n$ teams, where $n \geq 2$, it is possible to label the teams $T_1, T_2, \ldots, T_n$ so that $T_i$ beats $T_{i+1}$ for all $i = 1, 2, \ldots, n-1$. For instance, one such labeling in the example above is $T_1 = A, T_2 = B, T_3 = C, T_4 = E, T_5 = D$. (Hint: Given $k+1$ teams, pick one -- say $T'$ beats $T_1$, $T'$ loses to the first $m$ teams (where $1 \leq m \leq k-1$) and beats the $(m+1)$st team, and $T'$ loses to all the other teams.)
     \end{problem}
     \begin{proof}
-        Enter proof here.
+        Problem confuses me, will ask for help either in class or in student hours. However, I know that its a proof by induction for the property of a sequence.
     \end{proof}
 
 % ------------------------------------------------------------------------------
