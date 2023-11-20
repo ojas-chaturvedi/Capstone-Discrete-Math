@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1699180365 "/Users/oj/Developer/Capstone-Discrete-Math/notes_template.tex" "auxiliary-files/notes_template.pdf" "notes_template" 1699180366 0
-  "/Users/oj/Developer/Capstone-Discrete-Math/notes_template.tex" 1699065542 1784 6549e9649b1236a2be0f5164770fc7b0 ""
+["pdflatex"] 1700442763 "/Users/oj/Documents/Capstone-Discrete-Math/notes_template.tex" "latex-auxiliary-files/notes_template.pdf" "notes_template" 1700442764 0
+  "/Users/oj/Documents/Capstone-Discrete-Math/notes_template.tex" 1699065542 1784 6549e9649b1236a2be0f5164770fc7b0 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -163,14 +163,14 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1694762629 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694762617 7883456 8e4f7477bbe93bf7877646eb4ea21712 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "auxiliary-files/notes_template.aux" 1699180366 738 d08ed5c6e04c8dcc95cace145c135e06 "pdflatex"
-  "auxiliary-files/notes_template.out" 1699180366 78 703eeebbbfdd0695312a5c4c715880d7 "pdflatex"
-  "auxiliary-files/notes_template.toc" 1699180366 93 79af5b90d507b5a960a0741186f8ecf8 "pdflatex"
+  "latex-auxiliary-files/notes_template.aux" 1700442764 738 d08ed5c6e04c8dcc95cace145c135e06 "pdflatex"
+  "latex-auxiliary-files/notes_template.out" 1700442764 78 703eeebbbfdd0695312a5c4c715880d7 "pdflatex"
+  "latex-auxiliary-files/notes_template.toc" 1700442764 93 79af5b90d507b5a960a0741186f8ecf8 "pdflatex"
   "notes_template.tex" 1699065542 1784 6549e9649b1236a2be0f5164770fc7b0 ""
   (generated)
-  "auxiliary-files/notes_template.aux"
-  "auxiliary-files/notes_template.log"
-  "auxiliary-files/notes_template.out"
-  "auxiliary-files/notes_template.pdf"
-  "auxiliary-files/notes_template.toc"
+  "latex-auxiliary-files/notes_template.aux"
+  "latex-auxiliary-files/notes_template.log"
+  "latex-auxiliary-files/notes_template.out"
+  "latex-auxiliary-files/notes_template.pdf"
+  "latex-auxiliary-files/notes_template.toc"
   (rewritten before read)
