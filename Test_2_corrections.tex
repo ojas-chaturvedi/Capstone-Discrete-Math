@@ -1,0 +1,186 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor} % for color definitions
+\usepackage{mdframed} % for framing and shading the problems
+\usepackage{lipsum} % for generating text, remove in your actual document
+\usepackage{geometry} % for page layout
+\usepackage{titling} % for title page layout
+
+% Set the page size and margins
+\geometry{letterpaper, portrait, margin=1in}
+
+% Define a new environment for the problems that takes one argument for the problem number
+\newenvironment{problem}[1]{
+    \begin{mdframed}[backgroundcolor=gray!20, skipabove=\baselineskip, skipbelow=\baselineskip, nobreak=true, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=10pt, innerbottommargin=10pt]
+    \textbf{Problem #1.}
+}{
+    \end{mdframed}
+}
+
+% Define a new environment for the proofs
+\newenvironment{proof}{
+    \begin{mdframed}[nobreak=true, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=10pt, innerbottommargin=10pt]
+    \textbf{Proof.}
+}{
+    \hfill $\square$
+    \end{mdframed}
+}
+
+% Remove section numbering
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+% Remove table of contents numbering
+\renewcommand{\thesection}{}
+
+% Title page info
+\title{Test 2 Corrections \\ \large Capstone: Discrete Math}
+\author{Ojas Chaturvedi \\ \small Absent for Model UN Conference}
+\date{November 17, 2023}
+
+% ------------------------------------------------------------------------------
+\begin{document}
+
+% Title page
+\begin{titlingpage}
+    \maketitle
+\end{titlingpage}
+
+% ------------------------------------------------------------------------------
+
+\begin{problem}{2}
+    For this problem, prove the Reverse Triangle Inequality, which is as follows: for all real numbers $x$ and $y$,
+    \begin{equation*}
+        |x| - |y| \leq |x + y|
+    \end{equation*}
+    You may use the Triangle Inequality itself as well as the following lemmas from class freely in your proof, indicating them by name if you apply them:
+    \begin{itemize}
+        \item \textbf{(Lemma 1)} For all real numbers $r$, $- |r| \leq r \leq |r|$
+        \item \textbf{(Lemma 2)} For all real numbers $r$, $|-r| = |r|$
+    \end{itemize}
+    Hint: $|x| = |x + y + (-y)|$
+\end{problem}
+\begin{proof}
+    We need to prove that for all real numbers $x$ and $y$, the inequality $|x| - |y| \leq |x + y|$ is true. \\
+    By the Triangle Inequality, for all real numbers $a$ and $b$,
+    \begin{equation*}
+        |a + b| \leq |a| + |b|
+    \end{equation*}
+    Applying this to $x + y$ and $-y$, we obtain:
+    \begin{align*}
+        |(x + y) + (-y)| &\leq |x + y| + |-y| \\
+        |x + y - y| &\leq |x + y| + |y| \\
+        |x| &\leq |x + y| + |y| 
+    \end{align*}
+    By Lemma 2, $|-y| = |y|$. Thus,
+    \begin{align*}
+        |x| &\leq |x + y| + |y| \\
+        |x| - |y| &\leq |x + y|
+    \end{align*}
+    Therefore, we have shown that $|x| - |y| \leq |x + y|$ for all real numbers $x$ and $y$.
+\end{proof}
+
+\begin{problem}{3}
+    Prove that for all real numbers $x$, $\lceil{x} \rceil = - \lfloor{-x} \rfloor$.
+\end{problem}
+\begin{proof}
+    We need to prove that $\lceil{x} \rceil = - \lfloor{-x} \rfloor$ for all real numbers $x$. \\
+    By definition of ceiling, $\lceil{x}\rceil$ is the smallest integer greater than or equal to $x$.
+    By definition of floor, $\lfloor{x}\rfloor$ is the greatest integer less than or equal to $x$. \\ \\
+    Let $n$ be an integer such that:
+    \begin{align*}
+        n \leq x &< n + 1 \\
+        -n - 1 < -x &\leq -n
+    \end{align*}
+    By definition of ceiling, $\lceil{x}\rceil = n+1$. 
+    By definition of floor, $\lfloor{-x}\rfloor = -n-1$. \\
+    Observe,
+    \begin{align*}
+        \lceil{x}\rceil &= n+1 \\
+        &= -(-n-1) \\
+        &= -\lfloor{-x}\rfloor
+    \end{align*}
+    Therefore, $\lceil{x}\rceil = - \lfloor{-x}\rfloor$ for all real numbers $x$.
+\end{proof}
+
+\begin{problem}{4}
+    Let $a$, $b$, and $c$ be arbitrary integers and let $r = a \bmod b$. Prove that if $c \mid a$ and $c \mid b$, then $c \mid r$.
+\end{problem}
+\begin{proof}
+    We are given that $a$, $b$, and $c$ are arbitrary integers, and that $r = a \bmod b$. \\
+    We need to prove that $c \mid r$ given that $c \mid a$ and $c \mid b$. \\
+    By definition of mod, $r = a \bmod b$ means that $a = bq + r$ for some integer $q$. \\
+    $c \mid a$ can be written as $a = ck_1$ for some integer $k_1$. \\
+    $c \mid b$ can be written as $b = ck_2$ for some integer $k_2$. \\ \\
+    Substituting these into the equation $a = bq + r$:
+    \begin{align*}
+        a &= bq + r \\
+        ck_1 &= (ck_2)q + r \\
+        r &= ck_1 - (ck_2)q \\
+        r &= c(k_1 - k_2q)
+    \end{align*}
+    Since $k_1 - k_2q$ is an integer since it is the sum of products of integers, this means that $r$ is an integer multiple of $c$. By definition, $c$ divides $r$. \\
+    Therefore, $c \mid r$.
+\end{proof}
+
+\begin{problem}{5}
+    Prove that for all integers $n > 10$, $n^2 - 100$ is composite.
+\end{problem}
+\begin{proof}
+    We need to prove that $n^2 - 100$ is composite for all integers $n > 10$. \\
+    By definition of a composite number, $n^2 - 100$ must be a positive integer that has at least one positive divisor other than 1 and itself.
+    \begin{equation*}
+        n^2 - 100 = (n - 10)(n + 10)
+    \end{equation*}
+    For $n > 10$ and $n \neq 11$:
+    \begin{align*}
+        (n-10) &> 1 \\
+        (n+10) &> n > 1
+    \end{align*}
+    Since $n^2-100$ can be written as the product of two integers greater than $1$, $(n-10)$ and $(n+10)$, it is composite. \\ \\
+    For $n = 11$:
+    \begin{align*}
+        (n-10) &= 1 \\
+        (n+10) &= 21 \\
+        n^2 - 100 &= 21 \\
+        &= 1 \cdot 21 \\
+        &= 3 \cdot 7
+    \end{align*}
+    When $n = 11$, since $n^2 - 100$ can be written as the product of two integers other than 1 and itself ($21$), it is composite. \\ \\
+    Thus, for $n > 10$, $n^2 - 100$ is always composite.
+\end{proof}
+
+\begin{problem}{6}
+    Prove that for all integers $n$, if $3 \nmid n$, then $3 \mid (n^2 +2)$.\ (\textit{Hint:} Quotient-Remainder Theorem will help immensely with this.)
+\end{problem}
+\begin{proof}
+    We need to prove that for all integers $n$, if $3 \nmid n$, then $3 \mid (n^2 + 2)$. \\
+    By Quotient-Remainder Theorem, for any integer $n$ and a positive integer $d$, there exist unique integers $q$ and $r$ such that:
+    \begin{align*}
+        n &= dq + r \\
+        0 &\leq r < d
+    \end{align*}
+    For $d = 3$, and since $3 \nmid n$, the possible remainders for $n$ are $r = 1$ or $r = 2$. \\ \\
+    \textbf{Case 1:} If $r = 1$, then $n = 3q + 1$ for some integer $q$. Squaring both sides:
+    \begin{align*}
+        n^2 &= {(3q + 1)}^2 \\
+        &= 9q^2 + 6q + 1 \\
+        n^2 + 2 &= 9q^2 + 6q + 3 \\
+        &= 3(3q^2 + 2q + 1)
+    \end{align*}
+    \textbf{Case 2:} If $r = 2$, then $n = 3q + 2$. Squaring both sides:
+    \begin{align*}
+        n^2 &= {(3q + 2)}^2 \\
+        &= 9q^2 + 12q + 4 \\
+        n^2 + 2 &= 9q^2 + 12q + 6 \\
+        &= 3(3q^2 + 4q + 2)
+    \end{align*}
+    In both cases, $3$ divides $n^2 + 2$, thus proving that for all integers $n$, if $3 \nmid n$, then $3 \mid (n^2 +2)$.
+\end{proof}
+
+% ------------------------------------------------------------------------------
+\end{document}
+% ------------------------------------------------------------------------------
