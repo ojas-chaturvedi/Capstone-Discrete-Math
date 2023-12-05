@@ -1,7 +1,0 @@
-\contentsline {section}{\numberline {}5.1: Sequences}{1}{}%
-\contentsline {subsection}{\numberline {}Notes}{1}{}%
-\contentsline {section}{\numberline {}5.2: Mathematical Induction I}{2}{}%
-\contentsline {subsection}{\numberline {}Notes}{2}{}%
-\contentsline {section}{\numberline {}5.3: Mathematical Induction II}{3}{}%
-\contentsline {subsection}{\numberline {}Different types of problems}{3}{}%
-\contentsline {section}{\numberline {}Template for Mathematical Induction}{6}{}%
