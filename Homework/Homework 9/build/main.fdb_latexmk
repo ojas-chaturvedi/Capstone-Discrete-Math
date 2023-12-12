@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1701754920 "/Users/oj/Documents/Capstone-Discrete-Math/Homework 9/main.tex" "build/main.pdf" "main" 1701754922 0
-  "/Users/oj/Documents/Capstone-Discrete-Math/Homework 9/main.tex" 1701754919 18258 a5b4293a8a8460e32ea2fc47a80e0652 ""
+["pdflatex"] 1701829616 "/Users/oj/Documents/Capstone-Discrete-Math/Homework 9/main.tex" "build/main.pdf" "main" 1701829616 0
+  "/Users/oj/Documents/Capstone-Discrete-Math/Homework 9/main.tex" 1701754941 18258 a5b4293a8a8460e32ea2fc47a80e0652 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -128,11 +128,11 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1701186423 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1701186363 7883458 6f2b797840a02ffca6bbc4704ac17e06 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "build/main.aux" 1701754922 2497 ff2338f1a221d6045c1e87f741a4b6c4 "pdflatex"
-  "build/main.out" 1701754922 1910 1830eca18465a814efb86376a1524035 "pdflatex"
-  "homework.cls" 1701754844 5220 148f70273aeca586efd44e0d0555807f ""
+  "build/main.aux" 1701829616 2497 ff2338f1a221d6045c1e87f741a4b6c4 "pdflatex"
+  "build/main.out" 1701829616 1910 1830eca18465a814efb86376a1524035 "pdflatex"
+  "homework.cls" 1701829616 5211 8c7f2442165da148af7b7c26f8edd27d ""
   "hw-shortcuts.sty" 1701754292 1491 9f3a2ac8ded000aa845085eaf7493839 ""
-  "main.tex" 1701754919 18258 a5b4293a8a8460e32ea2fc47a80e0652 ""
+  "main.tex" 1701754941 18258 a5b4293a8a8460e32ea2fc47a80e0652 ""
   (generated)
   "build/main.aux"
   "build/main.log"

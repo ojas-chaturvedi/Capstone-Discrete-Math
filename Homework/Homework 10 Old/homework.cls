@@ -56,7 +56,6 @@
 % Set the page on letter paper with microtype improvements and better list formatting
 % \RequirePackage[letterpaper]{geometry}
 \usepackage{geometry}
-\usepackage{listings}
 \geometry{letterpaper, portrait, margin=1in}
 \RequirePackage{microtype}
 \RequirePackage{enumerate}
@@ -76,7 +75,7 @@
 % Page header
 \RequirePackage{fancyhdr}
 \lhead{\name \\ \texttt{\email}}
-\rhead{Last Updated: \deadline \\ \course{} -- \assignmentname}
+\rhead{Due: \deadline \\ \course{} -- \assignmentname}
 \pagestyle{fancyplain}
     
 % Format section headers for use in writing ``Problem X'' in small caps with appropriate spacing
@@ -91,6 +90,9 @@
 \RequirePackage{helvet}
 \titleformat{\subsection}{\large\bfseries\sffamily}{}{0em}{}
 
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
     
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
