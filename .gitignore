@@ -1,2 +1,10 @@
-.DS_Store
+#Overall
 .vscode/
+.DS_Store
+
+#LaTeX-specific
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
