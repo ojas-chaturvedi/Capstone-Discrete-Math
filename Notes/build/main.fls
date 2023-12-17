@@ -424,6 +424,42 @@ INPUT ./Lectures/[5] Chapter 5.tex
 INPUT Lectures/[5] Chapter 5.tex
 INPUT ./Lectures/[5] Chapter 5.tex
 INPUT Lectures/[5] Chapter 5.tex
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT ./Lectures/[6] Chapter 6.tex
 INPUT ./Lectures/[6] Chapter 6.tex
 INPUT ./Lectures/[6] Chapter 6.tex
@@ -454,6 +490,10 @@ INPUT build/Lectures/[6] Chapter 6.aux
 INPUT build/Lectures/[6] Chapter 6.aux
 INPUT build/Lectures/[6] Chapter 6.aux
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb

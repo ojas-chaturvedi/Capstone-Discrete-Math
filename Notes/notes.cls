@@ -81,3 +81,19 @@
 % Redefine the bar and vec commands to use larger overlines and bold-faced vectors
 \renewcommand{\bar}{\overline}
 \renewcommand{\vec}{\mathbf}
+
+\newtheoremstyle{nonitalic} % Name of the style
+    {}                        % Space above
+    {}                        % Space below
+    {\normalfont}             % Body font
+    {}                        % Indent amount
+    {\bfseries}               % Theorem head font
+    {.}                       % Punctuation after theorem head
+    {.5em}                    % Space after theorem head
+    {}                        % Theorem head spec
+
+\theoremstyle{nonitalic}
+
+% Headers for numbered problems
+% \newcommand{\problem}[1]{\textbf{Problem #1}}
+\newtheorem*{problem}{Problem}
