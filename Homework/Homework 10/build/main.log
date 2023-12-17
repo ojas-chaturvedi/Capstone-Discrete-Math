@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.28)  6 DEC 2023 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.11)  14 DEC 2023 19:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/oj/Documents/Capstone-Discrete-Math/Homework 10/main.tex"
-(/Users/oj/Documents/Capstone-Discrete-Math/Homework 10/main.tex
+**"/Users/oj/Documents/Capstone-Discrete-Math/Homework/Homework 10/main.tex"
+(/Users/oj/Documents/Capstone-Discrete-Math/Homework/Homework 10/main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -106,11 +106,18 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip54
 \thm@headsep=\skip55
 \dth@everypar=\toks26
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count271
+\float@exts=\toks27
+\float@box=\box53
+\@float@everytoks=\toks28
+\@floatcapt=\box54
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks27
+\KV@toks@=\toks29
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
@@ -131,9 +138,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count271
-\Gm@cntv=\count272
-\c@Gm@tempcnt=\count273
+\Gm@cnth=\count272
+\Gm@cntv=\count273
+\c@Gm@tempcnt=\count274
 \Gm@bindingoffset=\dimen152
 \Gm@wd@mp=\dimen153
 \Gm@odd@mp=\dimen154
@@ -142,7 +149,7 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutheight=\dimen157
 \Gm@layouthoffset=\dimen158
 \Gm@layoutvoffset=\dimen159
-\Gm@dimlist=\toks28
+\Gm@dimlist=\toks30
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip56
@@ -158,18 +165,18 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip65
 \enit@outerparindent=\dimen160
-\enit@toks=\toks29
-\enit@inbox=\box53
-\enit@count@id=\count274
-\enitdp@description=\count275
+\enit@toks=\toks31
+\enit@inbox=\box55
+\enit@count@id=\count275
+\enitdp@description=\count276
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count276
-\l__pdf_internal_box=\box54
-) (build/main.aux)
+\l__color_backend_stack_int=\count277
+\l__pdf_internal_box=\box56
+) (build/main.aux (build/Sections/[1] 5.8.aux) (build/Sections/[2] 5.9.aux) (build/Sections/[3] 6.1.aux) (build/Sections/[4] 6.2.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -188,17 +195,17 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count277
+\scratchcounter=\count278
 \scratchdimen=\dimen161
-\scratchbox=\box55
-\nofMPsegments=\count278
-\nofMParguments=\count279
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count280
+\scratchbox=\box57
+\nofMPsegments=\count279
+\nofMParguments=\count280
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count281
 \MPscratchDim=\dimen162
-\MPnumerator=\count281
-\makeMPintoPDFobject=\count282
-\everyMPtoPDFconversion=\toks31
+\MPnumerator=\count282
+\makeMPintoPDFobject=\count283
+\everyMPtoPDFconversion=\toks33
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -222,7 +229,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
 * \topmargin=-37.0pt
-* \headheight=13.6pt
+* \headheight=25.2842pt
 * \headsep=25.0pt
 * \topskip=11.0pt
 * \footskip=30.0pt
@@ -239,71 +246,134 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+\openout2 = `"Sections/[1] 5.8.aux"'.
+
+(./Sections/[1] 5.8.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 38.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 13.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-<./images//5.8.24.png, id=1, 162.6075pt x 143.53625pt>
+) [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+] [2] [3] [4]
+<./images//5.8.24.png, id=24, 162.6075pt x 143.53625pt>
 File: ./images//5.8.24.png Graphic file (type png)
 <use ./images//5.8.24.png>
-Package pdftex.def Info: ./images//5.8.24.png  used on input line 79.
+Package pdftex.def Info: ./images//5.8.24.png  used on input line 247.
 (pdftex.def)             Requested size: 162.6071pt x 143.53589pt.
+ [5 <./images//5.8.24.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
+
+ []
+
+) [6]
+\openout2 = `"Sections/[2] 5.9.aux"'.
+
+ (./Sections/[2] 5.9.tex
+Underfull \hbox (badness 10000) in paragraph at lines 57--64
+
+ []
 
 
-Package fancyhdr Warning: \headheight is too small (13.6pt): 
-(fancyhdr)                Make it at least 25.2842pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.2842pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-11.68419pt}.
+Underfull \hbox (badness 10000) in paragraph at lines 57--64
 
-[1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ []
 
- <./images//5.8.24.png>]
 
-Package fancyhdr Warning: \headheight is too small (13.6pt): 
-(fancyhdr)                Make it at least 25.2842pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.2842pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-11.68419pt}.
+Underfull \hbox (badness 10000) in paragraph at lines 57--64
 
-[2]
+ []
 
-Package fancyhdr Warning: \headheight is too small (13.6pt): 
-(fancyhdr)                Make it at least 25.2842pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.2842pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-11.68419pt}.
+[7
 
-[3]
 
-Package fancyhdr Warning: \headheight is too small (13.6pt): 
-(fancyhdr)                Make it at least 25.2842pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.2842pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-11.68419pt}.
 
-[4] (build/main.aux) ) 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 85--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--92
+
+ []
+
+[8]) [9]
+\openout2 = `"Sections/[3] 6.1.aux"'.
+
+ (./Sections/[3] 6.1.tex [10
+
+
+
+]) [11]
+\openout2 = `"Sections/[4] 6.2.aux"'.
+
+ (./Sections/[4] 6.2.tex
+Underfull \hbox (badness 10000) in paragraph at lines 19--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--58
+
+ []
+
+[12
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 76--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--81
+
+ []
+
+) [13] (build/main.aux (build/Sections/[1] 5.8.aux) (build/Sections/[2] 5.9.aux) (build/Sections/[3] 6.1.aux) (build/Sections/[4] 6.2.aux)) ) 
 Here is how much of TeX's memory you used:
- 3791 strings out of 476025
- 57802 string characters out of 5790016
- 1862388 words of memory out of 5000000
- 24206 multiletter control sequences out of 15000+600000
- 519513 words of font info for 61 fonts, out of 8000000 for 9000
+ 3984 strings out of 476025
+ 63022 string characters out of 5790016
+ 1866388 words of memory out of 5000000
+ 24364 multiletter control sequences out of 15000+600000
+ 519872 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,13n,62p,367b,372s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on build/main.pdf (4 pages, 119925 bytes).
+ 57i,14n,62p,558b,416s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on build/main.pdf (13 pages, 156711 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

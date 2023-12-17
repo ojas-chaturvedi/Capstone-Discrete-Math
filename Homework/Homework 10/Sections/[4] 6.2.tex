@@ -1,0 +1,81 @@
+\begin{question}
+    {6.2.10}
+    {
+        Use an element argument to prove the statement.
+        Assume that all sets are subsets of a universal set $U$.
+        For all sets $A, B$, and $C$,
+        \begin{align*}
+            (A-B) \cap(C-B)=(A \cap C)-B \text{. }
+        \end{align*}
+        \vspace{-\baselineskip}
+    }
+\end{question}
+\begin{proof}
+    Consider arbitrary sets \(A, B, C\). The given statement is proven true by establishing two key sub-statements:
+    \begin{enumerate}
+        \item[1.] \((A - B) \cap (C - B) \subseteq (A \cap C) - B\)
+        \item[2.] \((A \cap C) - B \subseteq (A - B) \cap (C - B)\)
+    \end{enumerate}
+    Firstly, for statement 1: \\
+    Let \(x\) be an element of \((A - B) \cap (C - B)\). \\
+    Since \(x\) is in the intersection, it must be in both \(A - B\) and \(C - B\). Thus, \(x\) belongs to \(A\) and \(C\) but not to \(B\). Consequently, \(x\) is an element of \(A \cap C\) and not in \(B\), leading to \(x\) being in \((A \cap C) - B\). This confirms \((A - B) \cap (C - B) \subseteq (A \cap C) - B\). \\ \\
+    Next, for statement 2: \\
+    Take \(x\) as an element of \((A \cap C) - B\). \\
+    From the set difference and intersection definitions, \(x\) is in both \(A\) and \(C\), and not in \(B\). Hence, \(x\) lies in both \(A - B\) and \(C - B\). Therefore, by intersection properties, \(x\) is in \((A - B) \cap (C - B)\). \\
+    This confirms \((A \cap C) - B \subseteq (A - B) \cap (C - B)\).
+    Since both sub-statements are proven, it follows that \((A - B) \cap (C - B) = (A \cap C) - B\), thereby validating the original statement.
+\end{proof}
+
+\begin{question}
+    {6.2.14}
+    {
+        Use an element argument to prove the statement.
+        Assume that all sets are subsets of a universal set $U$.
+        For all sets $A, B$, and $C$, if $A \subseteq B$ then $A \cup C \subseteq B \cup C$.
+    }
+\end{question}
+\begin{proof}
+    Assume sets \(A, B, C\) with \(A \subseteq B\). Consider an arbitrary element \(x\). Assume \(x \in A \cup C\). According to the definition of union, this implies \(x \in A\) or \(x \in C\). \\ \\
+    \textbf{\textit{Case 1:}} \(x \in A\): \\
+    Given \(A \subseteq B\), if \(x\) is in \(A\), it must also be in \(B\). Hence, by the nature of union, \(x\) is in \(B \cup C\). \\ \\
+    \textbf{\textit{Case 2:}} \(x \in C\): \\
+    Directly by the definition of union, if \(x\) is in \(C\), it is necessarily in \(B \cup C\).
+    In both scenarios, \(x \in B \cup C\) is validated. Thus, it is concluded that \(A \cup C \subseteq B \cup C\).
+\end{proof}
+
+\begin{question}
+    {6.2.32}
+    {
+        Use the element method for proving a set equals the empty set to prove the statement.
+        Assume that all sets are subsets of a universal set $U$.
+        For all sets $A, B$, and $C$, if $A \subseteq B$ and $B \cap C=\emptyset$ then $A \cap C=\emptyset$.
+    }
+\end{question}
+\begin{proof}
+    To prove the statement, assume the contrary. Consider sets \(A, B, C\) such that \(A \subseteq B\) and \(B \cap C = \emptyset\). The negation of the statement is \(A \cap C \neq \emptyset\), implying the existence of an element \(x\) such that \(x \in A\) and \(x \in C\). \\ \\
+    Since \(x \in A\) and \(A \subseteq B\), it follows that \(x \in B\). However, if \(x \in C\) and \(B \cap C = \emptyset\), this leads to a contradiction because \(x\) cannot be in both \(B\) and \(C\) if their intersection is empty. \\ \\
+    This contradiction disproves the negation, thereby proving the original statement: If \(A \subseteq B\) and \(B \cap C = \emptyset\), then \(A \cap C = \emptyset\).
+\end{proof}
+
+\begin{question}
+    {6.2.39}
+    {
+        Prove the statement.
+        For all integers $n \geq 1$, if $A_1, A_2, A_3, \ldots$ and $B$ are any sets, then
+        \begin{align*}
+            \bigcap_{i=1}^n (A_i - B) = \left(\bigcap_{i=1}^n A_i \right) - B \text{. }
+        \end{align*}
+    }
+\end{question}
+\begin{proof}
+    Assume \(A_1, A_2, A_3, \ldots\) and \(B\) are arbitrary sets. The statement is proven by showing:
+    \begin{enumerate}
+        \item[1.] \(\left[\bigcap_{i = 1}^n (A_i - B)\right] \subseteq \left[\bigcap_{i = 1}^n A_i\right] - B\)
+        \item[2.] \(\left[\bigcap_{i = 1}^n A_i\right] - B \subseteq \left[\bigcap_{i = 1}^n (A_i - B)\right]\)
+    \end{enumerate}
+    First, to prove statement 1: \\
+    Let \(x\) be an element of \(\bigcap_{i = 1}^n (A_i - B)\). This means \(x\) is in each \(A_i - B\) for all \(i\), so \(x\) is in every \(A_i\) and not in \(B\). Therefore, \(x\) is in \(\bigcap_{i = 1}^n A_i\) and, by set difference, \(x\) is in \(\left(\bigcap_{i = 1}^n A_i\right) - B\). \\ \\
+    Next, to prove statement 2: \\
+    Consider \(x\) as an element of \((\bigcap_{i = 1}^n A_i) - B\). By set difference, \(x\) is in \(\bigcap_{i = 1}^n A_i\) and not in \(B\). Hence, \(x\) is in each \(A_i\) and not in \(B\), implying \(x\) is in every \(A_i - B\), and therefore in \(\bigcap_{i = 1}^n (A_i - B)\). \\ \\
+    As both sub-statements are confirmed, it follows that \(\bigcap_{i = 1}^n (A_i - B) = \left(\bigcap_{i = 1}^n A_i\right) - B\), thus proving the original statement.
+\end{proof}

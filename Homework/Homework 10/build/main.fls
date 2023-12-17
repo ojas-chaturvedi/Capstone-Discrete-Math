@@ -1,8 +1,8 @@
-PWD /Users/oj/Documents/Capstone-Discrete-Math/Homework 10
+PWD /Users/oj/Documents/Capstone-Discrete-Math/Homework/Homework 10
 INPUT /usr/local/texlive/2023/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/oj/Documents/Capstone-Discrete-Math/Homework 10/main.tex
+INPUT /Users/oj/Documents/Capstone-Discrete-Math/Homework/Homework 10/main.tex
 OUTPUT build/main.log
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -113,6 +113,17 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -246,6 +257,18 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.de
 INPUT build/main.aux
 INPUT build/main.aux
 INPUT build/main.aux
+INPUT build/Sections/[1] 5.8.aux
+INPUT build/Sections/[1] 5.8.aux
+INPUT build/Sections/[1] 5.8.aux
+INPUT build/Sections/[2] 5.9.aux
+INPUT build/Sections/[2] 5.9.aux
+INPUT build/Sections/[2] 5.9.aux
+INPUT build/Sections/[3] 6.1.aux
+INPUT build/Sections/[3] 6.1.aux
+INPUT build/Sections/[3] 6.1.aux
+INPUT build/Sections/[4] 6.2.aux
+INPUT build/Sections/[4] 6.2.aux
+INPUT build/Sections/[4] 6.2.aux
 OUTPUT build/main.aux
 INPUT /usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -266,6 +289,13 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT ./Sections/[1] 5.8.tex
+OUTPUT build/Sections/[1] 5.8.aux
+INPUT ./Sections/[1] 5.8.tex
+INPUT ./Sections/[1] 5.8.tex
+INPUT Sections/[1] 5.8.tex
+INPUT ./Sections/[1] 5.8.tex
+INPUT Sections/[1] 5.8.tex
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -304,16 +334,51 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
-INPUT ./images//5.8.24.png
-INPUT ./images//5.8.24.png
-INPUT ./images//5.8.24.png
 OUTPUT build/main.pdf
-INPUT ./images//5.8.24.png
 INPUT /usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./images//5.8.24.png
+INPUT ./images//5.8.24.png
+INPUT ./images//5.8.24.png
+INPUT ./images//5.8.24.png
+INPUT ./Sections/[2] 5.9.tex
+OUTPUT build/Sections/[2] 5.9.aux
+INPUT ./Sections/[2] 5.9.tex
+INPUT ./Sections/[2] 5.9.tex
+INPUT Sections/[2] 5.9.tex
+INPUT ./Sections/[2] 5.9.tex
+INPUT Sections/[2] 5.9.tex
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT ./Sections/[3] 6.1.tex
+OUTPUT build/Sections/[3] 6.1.aux
+INPUT ./Sections/[3] 6.1.tex
+INPUT ./Sections/[3] 6.1.tex
+INPUT Sections/[3] 6.1.tex
+INPUT ./Sections/[3] 6.1.tex
+INPUT Sections/[3] 6.1.tex
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
+INPUT ./Sections/[4] 6.2.tex
+OUTPUT build/Sections/[4] 6.2.aux
+INPUT ./Sections/[4] 6.2.tex
+INPUT ./Sections/[4] 6.2.tex
+INPUT Sections/[4] 6.2.tex
+INPUT ./Sections/[4] 6.2.tex
+INPUT Sections/[4] 6.2.tex
 INPUT build/main.aux
+INPUT build/Sections/[1] 5.8.aux
+INPUT build/Sections/[1] 5.8.aux
+INPUT build/Sections/[1] 5.8.aux
+INPUT build/Sections/[2] 5.9.aux
+INPUT build/Sections/[2] 5.9.aux
+INPUT build/Sections/[2] 5.9.aux
+INPUT build/Sections/[3] 6.1.aux
+INPUT build/Sections/[3] 6.1.aux
+INPUT build/Sections/[3] 6.1.aux
+INPUT build/Sections/[4] 6.2.aux
+INPUT build/Sections/[4] 6.2.aux
+INPUT build/Sections/[4] 6.2.aux
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb

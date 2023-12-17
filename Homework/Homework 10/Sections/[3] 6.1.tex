@@ -1,0 +1,103 @@
+\begin{question}
+    {6.1.6}
+    {
+        Let $A=\{x \in \mathbf{Z} \mid x=5 a+2$ for some integer $a\}$, $B=\{y \in \mathbf{Z} \mid y=10 b-3$ for some integer $b\}$, and $C=\{z \in \mathbf{Z} \mid z=10 c+7$ for some integer $c\}$. Prove or disprove each of the following statements.
+        \vspace{-\baselineskip}
+        \begin{enumerate}
+            \item[a.] $A \subseteq B$
+            \item[b.] $B \subseteq A$
+            \item[c.] $B=C$
+        \end{enumerate}
+    }
+\end{question}
+\begin{proof}
+    Let $A=\{x \in \mathbf{Z} \mid x=5 a+2$ for some integer $a\}$, $B=\{y \in \mathbf{Z} \mid y=10 b-3$ for some integer $b\}$, and $C=\{z \in \mathbf{Z} \mid z=10 c+7$ for some integer $c\}$. 
+    \begin{enumerate}
+        \item[a.] Disprove $A \subseteq B$ using a counterexample: \\
+        Consider $x = 2 \in A$ for $a = 0$. For $x$ to be in $B$, we need $10b - 3 = 2$, leading to $b = 0.5$, a contradiction since $b$ must be an integer. Therefore, $A \not\subseteq B$.
+        \item[b.] 
+        Let $x \in B$, so $x = 10b - 3$ for some integer $b$. Then $x = 5(2b - 1) + 2$, which means there exists an integer $a = 2b - 1$ such that $x \in A$. Therefore, $B \subseteq A$.
+        \item[c.] 
+        To show $B \subseteq C$, let $x \in B$. Then $x = 10b - 3$ and setting $c = b - 1$, we get $x = 10c + 7$, thus $x \in C$. To show $C \subseteq B$, let $x \in C$. Then $x = 10c + 7$ and setting $b = c + 1$, we get $x = 10b - 3$, thus $x \in B$. Hence, $B = C$.
+    \end{enumerate}
+    \vspace{-\baselineskip}
+\end{proof}
+
+\begin{question}
+    {6.1.20}
+    {
+        Let $B_i=\{x \in \mathbf{R} \mid 0 \leq x \leq i\}$ for all integers $i=1,2,3,4$.
+        \vspace{-\baselineskip}
+        \begin{enumerate}
+            \item[a.] $B_1 \cup B_2 \cup B_3 \cup B_4=$ ?
+            \item[b.] $B_1 \cap B_2 \cap B_3 \cap B_4=$ ?
+            \item[c.] Are $B_1, B_2, B_3$, and $B_4$ mutually disjoint? Explain.
+        \end{enumerate}
+    }
+\end{question}
+\begin{proof}
+    \begin{enumerate}
+        \item[a.] $\{x \in \mathbf{R} \mid 0 \leq x \leq 4\}$
+        \item[b.] $\{x \in \mathbf{R} \mid 0 \leq x \leq 1\}$
+        \item[c.] The sets $B_1, B_2, B_3$, and $B_4$ are not mutually disjoint. For instance, the number 1 is included in all these sets. More generally, if a number is in $B_i$, it will be in all $B_j$ for $j \geq i$.
+    \end{enumerate}
+    \vspace{-\baselineskip}
+\end{proof}
+
+\begin{question}
+    {6.1.23}
+    {
+        Let $V_i=\left\{x \in \mathbf{R} \mid-\dfrac{1}{i} \leq x \leq \dfrac{1}{i}\right\}=\left[-\dfrac{1}{i}, \dfrac{1}{i}\right]$ for all positive integers $i$.
+        \vspace{-\baselineskip}
+        \begin{enumerate}
+            \item[a.] $\bigcup_{i=1}^4 V_i=$ ?
+            \item[b.] $\bigcap_{i=1}^4 V_i=$ ?
+            \item[c.] Are $V_1, V_2, V_3, \ldots$ mutually disjoint? Explain.
+            \item[d.] $\bigcup_{i=1}^n V_i=$ ?
+            \item[e.] $\bigcap_{i=1}^n V_i=$ ?
+            \item[f.] $\bigcup_{i=1}^{\infty} V_i=$ ?
+            \item[g.] $\bigcap_{i=1}^{\infty} V_i=$ ?
+        \end{enumerate}
+    }
+\end{question}
+\begin{proof}
+    \begin{enumerate}
+        \item[a.] $\bigcup_{i=1}^4 V_i = [-1, 1]$
+        \item[b.] $\bigcap_{i=1}^4 V_i = \left[-\frac{1}{4}, \frac{1}{4}\right]$
+        \item[c.] The sets $V_1, V_2, V_3, \ldots$ are not mutually disjoint since they all contain the point 0.
+        \item[d.] $\bigcup_{i=1}^n V_i = [-1, 1]$ for any positive integer $n$.
+        \item[e.] $\bigcap_{i=1}^n V_i = \{0\}$ as $n \rightarrow \infty$.
+        \item[f.] $\bigcup_{i=1}^{\infty} V_i = [-1, 1]$
+        \item[g.] $\bigcap_{i=1}^{\infty} V_i = \{0\}$
+    \end{enumerate}    
+\end{proof}
+
+\begin{question}
+    {6.1.33}
+    {
+        \vspace{-\baselineskip}
+        \begin{enumerate}
+            \item[a.] Find $\mathscr{P}(\emptyset)$.
+            \item[b.] Find $\mathscr{P}(\mathscr{P}(\emptyset))$.
+            \item[c.] Find $\mathscr{P}(\mathscr{P}(\mathscr{P}(\emptyset)))$.
+        \end{enumerate}
+    }
+\end{question}
+\begin{proof}
+    \begin{enumerate}
+        \item[a.] 
+        \begin{equation*}
+            \mathscr{P}(\emptyset) = \{\emptyset\}
+        \end{equation*}
+    
+        \item[b.] 
+        \begin{equation*}
+            \mathscr{P}(\mathscr{P}(\emptyset)) = \{\emptyset, \{\emptyset\}\}
+        \end{equation*}
+    
+        \item[c.] 
+        \begin{equation*}
+            \mathscr{P}(\mathscr{P}(\mathscr{P}(\emptyset))) = \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, \{\emptyset, \{\emptyset\}\}\}
+        \end{equation*}
+    \end{enumerate}
+\end{proof}

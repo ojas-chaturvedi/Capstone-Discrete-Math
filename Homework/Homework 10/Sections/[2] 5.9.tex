@@ -1,0 +1,124 @@
+\begin{question}
+    {5.9.4b}
+    {
+        The set of arithmetic expressions over the real numbers can be defined recursively as follows:
+        \vspace{-\baselineskip}
+        \begin{enumerate}[label=\Roman*.]
+            \item BASE:\@ Each real number $r$ is an arithmetic expression.
+            \item RECURSION:\@ If $u$ and $v$ are arithmetic expressions, then the following are also arithmetic expressions:
+                \begin{enumerate}
+                    \item[a.] ($+u$)
+                    \item[b.] ($-u$)
+                    \item[c.] ($u + v$)
+                    \item[d.] ($u - v$)
+                    \item[e.] ($u \cdot v$)
+                    \item[f.] $\left(\dfrac{u}{v} \right)$
+                \end{enumerate}
+            \item RESTRICTION:\@ There are no arithmetic expressions over the real numbers other than those obtained from I and II.\@
+        \end{enumerate}
+        \vspace{-\baselineskip}
+        (Note that the \textit{expression} $\left(\dfrac{u}{v} \right)$ is legal even though the value of $v$ may be $0$.) Give derivations showing that each of the following is an arithmetic expression.
+        \begin{align*}
+            \left(\dfrac{(9 \cdot (6.1 + 2))}{((4-7) \cdot 6)} \right)
+        \end{align*}
+    }
+\end{question}
+\begin{proof}
+    \begin{enumerate}
+        \item According to BASE (I), numbers 9, 6.1, 2, 4, 7, and 6 are each arithmetic expressions.
+        \item Utilizing (1) and RECURSION II(c), the expression \(6.1 + 2\) qualifies as an arithmetic expression.
+        \item From (1), (2), and RECURSION II(e), the expression \(9 \cdot (6.1 + 2)\) is an arithmetic expression.
+        \item Using (1) and RECURSION II(d), the expression \(4 - 7\) is an arithmetic expression.
+        \item Applying (1), (4), and RECURSION II(e), the expression \((4 - 7) \cdot 6\) is an arithmetic expression.
+        \item Combining (3), (5), and RECURSION II(f), the expression \(\dfrac{9 \cdot (6.1 + 2)}{(4 - 7) \cdot 6}\) is confirmed to be an arithmetic expression.
+    \end{enumerate}
+    \vspace{-\baselineskip}
+\end{proof}
+
+\begin{question}
+    {5.9.6}
+    {
+        Define a set $S$ recursively as follows:
+        \vspace{-\baselineskip}
+        \begin{enumerate}[label=\Roman*.]
+            \item BASE:\@ $a \in S$
+            \item RECURSION:\@ If $s \in S$, then
+                \begin{enumerate}
+                    \item[a.] $sa \in S$
+                    \item[b.] $sb \in S$
+                \end{enumerate}
+            \item RESTRICTION:\@ Nothing is in $S$ other than objects defined in I and II above.
+        \end{enumerate}
+        \vspace{-\baselineskip}
+        Use structural induction to prove that every string in $S$ begins with an $a$.
+    }
+\end{question}
+\begin{proof}
+    The proof is conducted using structural induction to demonstrate that every string in \(S\) begins with an 'a'. \\ \\
+    \textbf{\textit{Base Case:}} \\
+    The base case involves the string 'a', as defined by BASE (I). Clearly, 'a' begins with an 'a', satisfying the property. \\ \\
+    \textbf{\textit{Inductive Step:}} \\
+    Assume for the recursion step that any string \(s \in S\) begins with 'a', a hypothesis based on the RECURSION rule (II). According to rules II(a) and II(b), if \(s \in S\), then both 'sa' and 'sb' are in \(S\). Given our hypothesis, 'sa' and 'sb' also begin with 'a'.  \\ \\
+    \textbf{\textit{Conclusion:}} \\
+    Since both the base case and the inductive step hold, and no elements are in \(S\) other than those defined in BASE and RECURSION, we conclude that every string in \(S\) begins with an 'a'.
+\end{proof}
+
+\begin{question}
+    {5.9.11}
+    {
+        Define a set $S$ recursively as follows:
+        \vspace{-\baselineskip}
+        \begin{enumerate}[label=\Roman*.]
+            \item BASE:\@ $0 \in S$
+            \item RECURSION:\@ If $s \in S$, then
+                \begin{enumerate}
+                    \item[a.] $s + 3 \in S$
+                    \item[b.] $s - 3 \in S$
+                \end{enumerate}
+            \item RESTRICTION:\@ Nothing is in $S$ other than objects defined in I and II above.
+        \end{enumerate}
+        \vspace{-\baselineskip}
+        Use structural induction to prove that every integer in $S$ is divisible by $3$.
+    }
+\end{question}
+\begin{proof}
+    The proof employs structural induction to establish that every integer in \(S\) is divisible by 3. \\ \\
+    \textbf{\textit{Base Case:}} \\
+    The BASE (I) of \(S\) includes the integer 0. Since 0 is divisible by 3, it fulfills the property. \\ \\
+    \textbf{\textit{Inductive Step:}} \\
+    For the inductive step, assume that any integer \(s \in S\) is divisible by 3. This is based on the RECURSION rule (II). According to rules II(a) and II(b), if \(s \in S\), then \(s + 3\) and \(s - 3\) also belong to \(S\). If \(s\) is divisible by 3, it can be represented as \(s = 3k\) for some integer \(k\). Therefore, both \(s + 3\) and \(s - 3\) are divisible by 3, as they can be expressed as \(3(k + 1)\) and \(3(k - 1)\), respectively. \\ \\
+    \textbf{\textit{Conclusion:}} \\
+    Given that the base case is satisfied and the inductive step holds, and considering that no elements other than those derived through BASE and RECURSION are in \(S\), it can be concluded that every integer in \(S\) is divisible by 3.
+\end{proof}
+
+\begin{question}
+    {5.9.16}
+    {
+        Give a recursive definition for the set of all strings of $0$'s and $1$'s for which all the $0$'s precede all the $1$'s.
+    }
+\end{question}
+\begin{proof}
+    Let $S$ be the set of all strings of 0's and 1's for which all the 0's precede all the 1's. Here is the recursive definition for $S$:
+    \begin{enumerate}
+        \item[\textbf{I.}] BASE: $\epsilon \in S$
+        \item[\textbf{II.}] RECURSION: If $s \in S$, then $0s \in S$ and $s1 \in S$
+        \item[\textbf{III.}] RESTRICTION: There are no elements of $S$ other than those inferred from rules I and II.
+    \end{enumerate}
+    \vspace{-\baselineskip}
+\end{proof}
+
+\begin{question}
+    {5.9.18}
+    {
+        Give a recursive definition for the set of all strings of $a$'s and $b$'s that contain exactly one $a$.
+    }
+\end{question}
+\begin{proof}
+    Let $S$ be the set of all strings of $a$'s and $b$'s that contain exactly one $a$. The following is a recursive definition of $S$:
+    \begin{enumerate}
+        \item[\textbf{I.}] BASE: $a \in S$
+        \item[\textbf{II.}] RECURSION: If $s \in S$, then $sb \in S$ and $bs \in S$
+        \item[\textbf{III.}] RESTRICTION: There are no elements of $S$ other than those inferred from rules I and II.
+    \end{enumerate}
+    \vspace{-\baselineskip}
+\end{proof}
