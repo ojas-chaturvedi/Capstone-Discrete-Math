@@ -1,0 +1,123 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm, float}
+\usepackage[margin=1in]{geometry} % for page dimensions
+\usepackage{fancyhdr, enumitem, mathrsfs} % for nice headers, enumerated lists, calligraphic letters
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{25.2842pt}
+\newcommand\question[2]{\vspace{.25in}\hrule{\textbf{#1}: #2}\vspace{.5em}\hrule\vspace{.10in}}
+\renewcommand\part[1]{\vspace{.10in}\textbf{(#1)}}
+\newcommand{\todo}{\fbox{TO-DO}\ \ } % for TODOs
+% \newcommand\algorithm{\vspace{.10in}\textbf{Algorithm: }}
+% \newcommand\correctness{\vspace{.10in}\textbf{Correctness: }}
+% \newcommand\runtime{\vspace{.10in}\textbf{Running time: }}
+\pagestyle{fancyplain}
+\lhead{{\NAME}}
+\chead{\textbf{Graph Theory HW}}
+\rhead{Capstone: Discrete Math}
+\begin{document}{\raggedright}
+%Section A==============Change the values below to match your information==================
+\newcommand\NAME{Ojas Chaturvedi}  % your name
+
+\begin{enumerate}
+
+    \item Ten players participate in a chess tournament. Eleven games have already been played. Prove that there is a player who has played at least three games.
+
+        \begin{proof}
+            If 11 games have been played, this means that there are 11 edges on the graph. This means the degree of the graph is 22 ($11 * 2$). If every player would have played 2 games, this means each player would be connected to 2 edges, resulting in a degree of 20. However, since we know that our graph has a degree of 22, this means that one player has played at least 3 games.
+        \end{proof}
+
+    \item
+        \begin{itemize}
+            \item[a.] How many different simple graphs are there on the vertex set $\{1, 2, 3, \dots, n\}$?
+            \item[b.] How many simple \emph{directed} graphs are there on vertex set $\{1, 2, 3, \dots, n\}$?
+            \item[c.] How many tournaments are there on vertex set $\{1, 2, 3, \dots, n\}$?
+        \end{itemize}
+
+        \begin{proof}
+            \begin{enumerate}
+                \item[a.] $2^{n \choose 2}$
+                \item[b.] $3^{n \choose 2}$
+                \item[c.] $2^{n \choose 2}$
+            \end{enumerate}
+        \end{proof}
+
+    \item
+        \begin{itemize}
+            \item[a.] How many non-isomorphic forests are there on five vertices?
+            \item[b.] How many non-isomorphic trees are there on seven vertices?
+            \item[c.] How many different labeled trees are there on $n$ vertices that have no vertices with degree more than 2?
+        \end{itemize}
+
+        \begin{proof}
+            \begin{enumerate}
+                \item[a.] $10$
+                \item[b.] $8$
+                \item[c.] $n!$
+            \end{enumerate}
+        \end{proof}
+
+    \item
+        \begin{itemize}
+            \item[a.] Prove that for any integers $n\geq 1$, there exists a set $S$ of ${n \choose 2}+1$ simple graphs on vertex set $\{1, 2, 3, \dots, n\}$ so that no two elements of $S$ are isomorphic.
+            \item[b.] Prove that the number of non-isomorphic labeled forests on vertex set $\{1, 2, 3, \dots, n\}$ is at least $p(n)$ (the number of partitions of the integer $n$).
+        \end{itemize}
+
+        \begin{proof}
+            \begin{itemize}
+                \item[a.] Adding an edge to a graph increases its total degree by 2, implying graphs with differing edge counts cannot be isomorphic. For a graph with \(n\) vertices, the maximum number of edges is \({n \choose 2}\). This observation establishes that there are at least \({n \choose 2}\) non-isomorphic simple graphs for \(n\) vertices. Including the empty graph (with 0 edges) increases this count by 1, leading to at least \({n \choose 2} + 1\) non-isomorphic simple graphs on \(n\) vertices. Therefore, for any integer \(n \geq 1\), there exists a set \(S\) of \({n \choose 2} + 1\) simple graphs on the vertex set \(\{1, 2, 3, \ldots, n\}\) such that no two graphs in \(S\) are isomorphic.
+                \item[b.] For each partition of \(n\), represented by integers \(x_1, x_2, \ldots, x_n\) summing to \(n\), let these integers correspond to the counts of vertices in the trees of a non-isomorphic labeled forest. Since the configuration of trees in a forest defines its structure, and given that the number of trees in a forest correlates with a partition of \(n\), the number of non-isomorphic labeled forests on a vertex set \(\{1, 2, 3, \ldots, n\}\) is at least \(p(n)\), where \(p(n)\) denotes the number of partitions of \(n\). This proves that the diversity of forests' structures at least matches the number of ways to partition \(n\).
+            \end{itemize}
+        \end{proof}
+
+    \item A tournament is called \emph{transitive} if the fact that there is an edge from $i$ to $j$ and an edge from $j$ to $k$ implies the fact that there is an edge from $i$ to $k$.
+        \begin{itemize}
+            \item[a.] How many transitive tournaments are there on vertex set $\{1, 2, 3, \dots, n\}$?
+            \item[b.] Prove that a tournament is transitive if, and only if, it has only one Hamiltonian path.
+        \end{itemize}
+
+        \begin{proof}
+            \begin{enumerate}
+                \item[a.] $n!$
+                \item[b.] Consider a tournament to be transitive if, for any vertices \(i, j,\) and \(k\), an edge from \(i\) to \(j\) and from \(j\) to \(k\) implies an edge from \(i\) to \(k\). A Hamiltonian Path in such a tournament involves a sequence \(v_1e_1v_2e_2v_3 \dots e_{n-1}v_n\), where each \(e_i\) connects vertices \(v_i\) and \(v_{i+1}\), and \(n\) is an integer. \\ If a transitive tournament had more than one Hamiltonian path, this would imply the existence of an edge that deviates from the sequence, pointing away from the direct path between \(v_n\) and \(v_{n+1}\), violating the tournament's transitivity. This contradiction shows that a transitive tournament can have only one Hamiltonian path.
+            \end{enumerate}
+        \end{proof}
+
+    \item An \emph{automorphism} of a graph $G$ is an isomorphism between $G$ and $G$ itself. That is, the permutation $f$ of the vertex set of $G$ is an automorphism of $G$ if for any two vertices $x$ and $y$ of $G$, the number of edges between $x$ and $y$ is equal to the number of edges between $f(x)$ and $f(y)$. How many automorphisms do the following (labeled) graphs have?
+        \begin{itemize}
+            \item[a.] The complete graph $K_n$ on $n$ vertices.
+            \item[b.] The cycle $C_n$ on $n$ vertices.
+            \item[c.] The path $P_n$ on $n$ vertices.
+            \item[d.] The star $S_n$ on $n$ vertices. (This graph has one vertex of degree $n-1$, and $n-1$ vertices of degree 1.)
+        \end{itemize}
+
+        \begin{proof}
+            \begin{enumerate}
+                \item[a.] $n!$
+                \item[b.] $2n$
+                \item[c.] $2$
+                \item[d.] $(n - 1)!$
+            \end{enumerate}
+        \end{proof}
+
+    \item Let $K_{m,n}$ be the simple graph whose vertex set consists of the $m-$element vertex set $A$, and the $n-$element vertex set $B$, and which has a total of $mn$ edges, each between a vertex in $A$ and a vertex in $B$. We call $K_{m,n}$ a \emph{complete bipartite graph}. Find the number of Hamiltonian cycles of $K_{m,n}$. Note that in the special case of $m=n$, the answer will differ from the other cases.
+
+        \begin{proof}
+            $\frac{2(n!)^2}{2n} = n! \cdot (n - 1)!$
+        \end{proof}
+
+    \item {\bf Extra credit:} Let $G$ be a graph. We say that $H$ is an \emph{induced subgraph} of $G$ if the vertex set of $H$ is a subset of that of $G$, and if $x$ and $y$ are two vertices of $H$, then $xy$ is an edge in $H$ if and only if $xy$ is an edge in $G$. Let $G$ be a simple graph that has 10 vertices and 38 edges. Prove that $G$ contains $K_4$ (the complete graph on four vertices) as an induced subgraph.
+
+        \begin{proof}
+            The complete graph \(K_{10}\) comprises \({10 \choose 2} = 45\) edges. Given that \(G\) is described as \(K_{10}\) minus 7 edges, it follows that \(G\) contains 38 edges. Consider the induced subgraphs on 4 vertices within \(K_{10}\); any such subgraph would naturally form \(K_4\), as all possible pairs of vertices are connected. The total number of these induced \(K_4\) subgraphs in \(K_{10}\) is \({10 \choose 4} = 210\). Removing an edge from \(K_{10}\) affects all \(K_4\) subgraphs that include both vertices connected by this edge. Specifically, for each edge removed, there are \({8 \choose 2} = 28\) potential \(K_4\) subgraphs (comprising the two vertices linked by the removed edge and any two of the remaining eight vertices) that are invalidated. Consequently, eliminating 7 edges from \(K_{10}\) invalidates \(7 \times 28 = 196\) of these \(K_4\) subgraphs, leaving \(210 - 196 = 14\) induced \(K_4\) subgraphs unaffected by the removals. Hence, even with the removal of 7 edges, \(G\) retains 14 valid induced \(K_4\) subgraphs, demonstrating that \(G\) contains \(K_4\) as an induced subgraph.
+        \end{proof}
+
+    \item {\bf Extra credit:} A high school has 90 alumni, each of whom has ten friends among the other alumni. Prove that each alumni can invite three people for lunch so that each of the four people at the lunch table will know at least two of the other three.
+
+        \begin{proof}
+            Consider an arbitrary alumnus \(a_0\) with 10 friends denoted by \(a_1, a_2, \ldots, a_{10}\). Each of these friends has 9 additional friends within the alumni network, excluding \(a_0\), leading to a total of \(10 \times 9 = 90\) friendships among \(a_0\)'s friends. Given the alumni population is 90, and excluding \(a_0\) reduces the potential pool to 89 people, it follows from the pigeonhole principle that at least two of \(a_0\)'s friends, say \(a_x\) and \(a_y\), must have a friend in common, denoted as \(m\), aside from \(a_0\). Since \(a_0\) is friends with both \(a_x\) and \(a_y\), and \(a_x\) and \(a_y\) are mutually friends with \(m\), each of these individuals knows at least two others within the group formed by \(a_0\), \(a_x\), \(a_y\), and \(m\). This configuration satisfies the condition that for any lunch gathering of four people, each person is acquainted with at least two others at the table. Therefore, it is demonstrated that any alumnus can invite three individuals \(a_x\), \(a_y\), and \(m\) such that each of the four people at the lunch knows at least two of the other three attendees.
+        \end{proof}
+
+\end{enumerate}
+
+\end{document}
